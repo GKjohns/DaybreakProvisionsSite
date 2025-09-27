@@ -32,6 +32,12 @@ export default defineNuxtConfig({
   },
 
   app: {
+    // Page transition for smooth load-in effect
+    pageTransition: { 
+      name: 'page', 
+      mode: 'out-in' 
+    },
+    
     head: {
       // HTML lang
       htmlAttrs: {
