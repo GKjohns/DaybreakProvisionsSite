@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daybreak Provisions OG Image</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #f0f0f0;
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        .og-container {
+            width: 1200px;
+            height: 630px;
+            background: white;
+            border: 2px solid #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .racing-stripes {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 100px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .stripe {
+            width: 4px;
+            height: 100%;
+            opacity: 0.6;
+        }
+
+        .stripe-1 {
+            background: #fbbf24;  /* Amber 400 */
+        }
+
+        .stripe-2 {
+            background: #d97706;  /* Amber 600 */
+        }
+
+        .stripe-3 {
+            background: #dc267f;  /* Pink */
+        }
+
+        .stripe-4 {
+            background: #9333ea;  /* Purple 600 */
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: baseline;
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+
+        .logo-primary {
+            font-size: 72px;
+            font-weight: 900;
+            letter-spacing: -0.02em;
+            color: #111827;
+        }
+
+        .logo-secondary {
+            font-size: 42px;
+            font-weight: 400;
+            color: #6b7280;
+        }
+
+        .catchphrase {
+            font-size: 44px;
+            font-weight: 400;
+            color: #6b7280;
+            text-align: center;
+            line-height: 1.4;
+            max-width: 900px;
+            letter-spacing: 0.02em;
+        }
+    </style>
+</head>
+<body>
+    <div class="og-container">
+        <!-- Logo -->
+        <div class="logo-container">
+            <span class="logo-primary">DAYBREAK</span>
+            <span class="logo-secondary">PROVISIONS</span>
+        </div>
+        
+        <!-- Catchphrase -->
+        <div class="catchphrase">
+            Quality provisions.<br>Zero overhead.
+        </div>
+        
+        <!-- Racing stripes -->
+        <div class="racing-stripes">
+            <div class="stripe stripe-1"></div>
+            <div class="stripe stripe-2"></div>
+            <div class="stripe stripe-3"></div>
+            <div class="stripe stripe-4"></div>
+        </div>
+    </div>
+</body>
+</html>

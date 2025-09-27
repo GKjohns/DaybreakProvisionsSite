@@ -4,52 +4,28 @@
     <div class="gradient-accent" />
 
     <!-- Navigation -->
-    <header class="sticky top-0 z-50 bg-surface border-b border-default">
-      <UContainer>
-        <div class="flex items-center justify-between h-16">
-          <AppLogo />
-          <div class="flex items-center gap-4">
-            <UColorModeSwitch />
-          </div>
-        </div>
-      </UContainer>
-    </header>
+    <UHeader>
+      <template #title>
+        <AppLogo />
+      </template>
+
+      <template #right>
+        <UColorModeButton />
+      </template>
+    </UHeader>
 
     <!-- Hero Section -->
     <section class="py-20 md:py-32">
       <UContainer>
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-          <!-- Text Content -->
-          <div class="max-w-lg">
-            <h1 class="hero-title mb-6 text-primary">
-              Quality provisions.<br/>
-              Zero overhead.
-            </h1>
-            <p class="hero-subtitle mb-10">
-              We install and maintain smart coolers in your building. 
-              Your people get 24/7 access to fresh food and drinks. You get a premium amenity at no cost.
-            </p>
-            <div class="flex flex-wrap gap-4">
-              <UButton
-                size="xl"
-                trailing-icon="i-lucide-arrow-right"
-              >
-                See How It Works
-              </UButton>
-            </div>
-          </div>
-          
-          <!-- Hero Image -->
-          <div class="flex justify-center md:justify-end">
-            <UColorModeImage
-              light="https://picsum.photos/600/400?random=1"
-              dark="https://picsum.photos/600/400?random=2"
-              :width="600"
-              :height="400"
-              class="rounded-lg shadow-lg"
-              alt="Smart cooler in modern office building"
-            />
-          </div>
+        <div class="text-center max-w-2xl mx-auto">
+          <h1 class="hero-title mb-6 text-primary">
+            Quality provisions.<br/>
+            Zero overhead.
+          </h1>
+          <p class="hero-subtitle">
+            We install and maintain smart coolers in your building. 
+            Your people get 24/7 access to fresh food and drinks. You get a premium amenity at no cost.
+          </p>
         </div>
       </UContainer>
     </section>
@@ -217,30 +193,27 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 border-t border-default">
-      <UContainer>
-        <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
-          <div class="text-xs font-bold text-muted tracking-wider">
-            © 2024 DAYBREAK PROVISIONS LLC
-          </div>
-          <div class="text-xs font-medium text-muted">
-            Richmond, VA
-          </div>
+    <UFooter>
+      <template #left>
+        <div class="text-xs font-bold text-muted tracking-wider">
+          © {{ currentYear }} DAYBREAK PROVISIONS LLC
         </div>
-      </UContainer>
-    </footer>
+      </template>
+
+      <template #center>
+        <ColorStripeLogo size="sm" />
+      </template>
+
+      <template #right>
+        <div class="text-xs font-medium text-muted">
+          Richmond, VA
+        </div>
+      </template>
+    </UFooter>
   </div>
 </template>
 
 <script setup>
-// SEO metadata
-useHead({
-  title: 'Daybreak Provisions - Quality provisions. Zero overhead.',
-  meta: [
-    {
-      name: 'description',
-      content: 'Smart coolers for your building. Premium amenity at zero cost. We handle installation, inventory, and maintenance.'
-    }
-  ]
-})
+// Computed current year for copyright
+const currentYear = computed(() => new Date().getFullYear())
 </script>
