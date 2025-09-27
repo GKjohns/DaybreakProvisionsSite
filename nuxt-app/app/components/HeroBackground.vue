@@ -33,7 +33,7 @@
 .sunrise-gradient {
   position: absolute;
   left: 50%;
-  bottom: -30%;
+  top: -30%;
   transform: translateX(-50%);
   border-radius: 50%;
   filter: blur(40px);
@@ -87,7 +87,7 @@
 /* Sun disk */
 .sun-disk {
   position: absolute;
-  bottom: -120px;
+  top: -120px;
   left: 50%;
   transform: translateX(-50%);
   width: 180px;
@@ -110,7 +110,7 @@
 /* Light rays */
 .light-rays {
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -121,13 +121,13 @@
 
 .ray {
   position: absolute;
-  bottom: -50px;
+  top: -50px;
   left: 50%;
-  transform-origin: bottom center;
+  transform-origin: top center;
   width: 2px;
   height: 100%;
   background: linear-gradient(
-    to top,
+    to bottom,
     rgba(255, 241, 118, 0.18),      /* golden ray */
     rgba(252, 211, 77, 0.12) 20%,   /* amber-300 */
     rgba(244, 114, 182, 0.06) 35%,  /* pink tint */
@@ -167,7 +167,7 @@
 @keyframes sunrise {
   0% {
     opacity: 0;
-    transform: translateX(-50%) translateY(50px) scale(4);
+    transform: translateX(-50%) translateY(-50px) scale(4);
   }
   35% {
     opacity: 0.85;
@@ -182,7 +182,7 @@
 @keyframes sunRise {
   0% {
     opacity: 0;
-    transform: translateX(-50%) translateY(35px) scale(3.2);
+    transform: translateX(-50%) translateY(-35px) scale(3.2);
   }
   35% {
     opacity: 0.55;
@@ -261,7 +261,7 @@
 
 .dark .ray {
   background: linear-gradient(
-    to top,
+    to bottom,
     rgba(255, 241, 118, 0.1),         /* golden ray */
     rgba(252, 211, 77, 0.07) 20%,     /* amber-300 */
     rgba(244, 114, 182, 0.04) 35%,    /* pink tint */
@@ -285,7 +285,7 @@
   .sun-disk {
     width: 140px;
     height: 140px;
-    bottom: -100px;
+    top: -100px;
   }
   
   .ray {
