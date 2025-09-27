@@ -76,6 +76,8 @@ export default defineNuxtConfig({
       
       // Link tags
       link: [
+        // Favicon - prefer SVG for modern browsers, fallback to ICO
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         { rel: 'canonical', href: 'https://www.daybreakprovisions.com' },
         

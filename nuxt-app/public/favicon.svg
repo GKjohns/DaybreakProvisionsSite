@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Color stripe bars matching Daybreak Provisions brand - matching ColorStripeLogo dimensions -->
+  <rect x="3" y="2" width="2" height="28" rx="1" fill="#FBB024"/>
+  <rect x="12" y="2" width="2" height="28" rx="1" fill="#D97706"/>
+  <rect x="21" y="2" width="2" height="28" rx="1" fill="#EC4899"/>
+  <rect x="30" y="2" width="2" height="28" rx="1" fill="#9333EA"/>
+</svg>
