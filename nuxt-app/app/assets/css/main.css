@@ -1,0 +1,112 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+/* Primary color configuration */
+:root {
+  --ui-primary: black;  /* Primary color for light mode */
+  --ui-bg: white;       /* Background color for light mode */
+}
+
+.dark {
+  --ui-primary: white;  /* Primary color for dark mode */
+  --ui-bg: #090909;     /* Background color for dark mode (a dark gray) */
+}
+
+/* Daybreak gradient accent bar */
+.gradient-accent {
+  background: linear-gradient(
+    to right,
+    rgba(251, 191, 36, 0.6),  /* Amber 400 with reduced opacity */
+    rgba(217, 119, 6, 0.5),   /* Amber 600 */
+    rgba(220, 38, 127, 0.5),  /* Pink */
+    rgba(147, 51, 234, 0.6)   /* Purple 600 */
+  );
+  height: 4px;
+}
+
+/* Dark mode gradient - more saturated and vibrant */
+.dark .gradient-accent {
+  background: linear-gradient(
+    to right,
+    rgba(252, 211, 77, 0.8),  /* Amber 300 - brighter in dark mode */
+    rgba(245, 158, 11, 0.7),  /* Amber 500 - more saturated */
+    rgba(236, 72, 153, 0.7),  /* Pink 400 - more vibrant */
+    rgba(168, 85, 247, 0.8)   /* Purple 500 - brighter and more saturated */
+  );
+}
+
+/* Subtle gradient for backgrounds */
+.gradient-subtle {
+  background: linear-gradient(
+    135deg,
+    rgba(251, 191, 36, 0.05),
+    rgba(147, 51, 234, 0.05)
+  );
+}
+
+/* Button gradient on hover */
+.gradient-button {
+  background: linear-gradient(
+    to right,
+    rgba(251, 191, 36, 0.8),
+    rgba(220, 38, 127, 0.8)
+  );
+}
+
+/* Typography - Natural semantic classes */
+.hero-title {
+  @apply text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight;
+  color: inherit;
+}
+
+.hero-subtitle {
+  @apply text-xl md:text-2xl;
+  opacity: 0.7;
+}
+
+/* Text hierarchy - let natural cascade work */
+.text-primary {
+  @apply text-gray-900 dark:text-white;
+}
+
+.text-secondary {
+  opacity: 0.75;
+}
+
+.text-muted {
+  opacity: 0.6;
+}
+
+.text-subtle {
+  opacity: 0.4;
+}
+
+/* Borders - semantic and simple */
+.border-default {
+  @apply border-gray-200 dark:border-gray-800;
+}
+
+/* Backgrounds with natural transparency */
+.bg-surface {
+  @apply bg-white/80 dark:bg-gray-900/80 backdrop-blur-md;
+}
+
+/* Natural text sizing */
+h1, h2, h3, h4 {
+  @apply text-gray-900 dark:text-white;
+}
+
+p {
+  @apply text-gray-700 dark:text-gray-300;
+}
+
+/* Stat numbers */
+.stat-value {
+  @apply text-4xl md:text-5xl font-bold;
+  color: inherit;
+}
+
+.stat-label {
+  @apply text-sm uppercase tracking-widest;
+  opacity: 0.5;
+}
