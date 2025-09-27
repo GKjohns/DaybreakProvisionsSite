@@ -8,188 +8,96 @@
       <template #title>
         <AppLogo />
       </template>
+      
+      <template #right>
+        <UButton 
+          to="/consultation"
+          variant="outline"
+          size="md"
+        >
+          Get Started
+        </UButton>
+      </template>
     </UHeader>
 
     <!-- Hero Section -->
-    <section class="py-20 md:py-32 relative overflow-hidden">
+    <div class="relative overflow-hidden">
       <!-- Sunrise Background Effect -->
       <HeroBackground />
       
-      <UContainer class="relative z-10">
-        <div class="text-center max-w-2xl mx-auto">
-          <h1 class="hero-title mb-6 text-primary">
-            Quality provisions.<br/>
-            Zero overhead.
-          </h1>
-          <p class="hero-subtitle">
-            We install and maintain smart coolers in your building. 
-            Your people get 24/7 access to fresh food and drinks. You get a premium amenity at no cost.
-          </p>
-        </div>
-      </UContainer>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="py-16 border-t border-default">
-      <UContainer>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16">
-          <div>
-            <div class="flex items-baseline gap-2">
-              <span class="stat-value">47</span>
-              <span class="stat-label">Locations</span>
-            </div>
-          </div>
-          <div>
-            <div class="flex items-baseline gap-2">
-              <span class="stat-value">99.7%</span>
-              <span class="stat-label">Uptime</span>
-            </div>
-          </div>
-          <div>
-            <div class="flex items-baseline gap-2">
-              <span class="stat-value">24/7</span>
-              <span class="stat-label">Access</span>
-            </div>
-          </div>
-        </div>
-      </UContainer>
-    </section>
+      <UPageHero
+        class="relative z-10"
+        title="Premium amenities. Zero cost."
+        description="We bring smart coolers to your building with fresh food and drinks. No installation fees, no maintenance hassles - just quality provisions when your people need them."
+        orientation="vertical"
+      :links="[
+        { label: 'Schedule Your Consultation', size: 'xl', to: '/consultation' }
+      ]"
+      />
+    </div>
 
     <!-- Three Pillars Section -->
-    <section class="py-16 md:py-20">
-      <UContainer>
-        <div class="grid md:grid-cols-3 gap-12">
-          <div class="space-y-4">
-            <UIcon name="i-lucide-building-2" class="w-8 h-8" />
-            <h3 class="text-xl font-bold">
-              Property Managers
-            </h3>
-            <p class="text-sm font-medium leading-relaxed text-secondary">
-              Premium amenity your tenants actually want. We handle installation, inventory, and maintenance. 
-              Optional revenue share available.
-            </p>
-          </div>
-
-          <div class="space-y-4">
-            <UIcon name="i-lucide-package" class="w-8 h-8" />
-            <h3 class="text-xl font-bold">
-              Curated Selection
-            </h3>
-            <p class="text-sm font-medium leading-relaxed text-secondary">
-              Local coffee, fresh sandwiches, healthy snacks. We stock what your building actually wants, 
-              backed by real purchase data.
-            </p>
-          </div>
-
-          <div class="space-y-4">
-            <UIcon name="i-lucide-zap" class="w-8 h-8" />
-            <h3 class="text-xl font-bold">
-              Smart Operations
-            </h3>
-            <p class="text-sm font-medium leading-relaxed text-secondary">
-              Contactless payment, real-time inventory, predictive restocking. 
-              The tech runs itself so we can focus on service.
-            </p>
-          </div>
-        </div>
-      </UContainer>
-    </section>
+    <UPageSection
+      title="Why property managers choose us"
+      description="We deliver a premium amenity experience that enhances your property value without adding to your operational burden."
+      orientation="horizontal"
+      :features="pillarsFeatures"
+    >
+      <div class="w-full aspect-[4/3] rounded-lg overflow-hidden">
+        <img 
+          src="/landing_art.png" 
+          alt="Daybreak Provisions smart cooler with fresh food and beverages" 
+          class="w-full h-full object-cover"
+        />
+      </div>
+    </UPageSection>
 
     <!-- Simple Process Section -->
-    <section class="py-16 border-t border-default">
-      <UContainer>
-        <h2 class="text-3xl md:text-4xl font-bold mb-12">
-          Simple process
-        </h2>
-        
-        <div class="grid md:grid-cols-2 gap-8 md:gap-12">
-          <div class="space-y-6">
-            <div class="flex gap-4">
-              <span class="text-2xl font-bold text-subtle">
-                01
-              </span>
-              <div>
-                <h4 class="font-bold mb-1">Site Assessment</h4>
-                <p class="text-sm font-medium text-secondary">Quick walkthrough to identify the best location and product mix for your building.</p>
-              </div>
-            </div>
-            
-            <div class="flex gap-4">
-              <span class="text-2xl font-bold text-subtle">
-                02
-              </span>
-              <div>
-                <h4 class="font-bold mb-1">Installation</h4>
-                <p class="text-sm font-medium text-secondary">We deliver and set up the cooler. Standard outlet, minimal footprint. Takes under two hours.</p>
-              </div>
-            </div>
-            
-            <div class="flex gap-4">
-              <span class="text-2xl font-bold text-subtle">
-                03
-              </span>
-              <div>
-                <h4 class="font-bold mb-1">Ongoing Service</h4>
-                <p class="text-sm font-medium text-secondary">Regular restocking, cleaning, and maintenance. Everything handled by our team.</p>
-              </div>
-            </div>
-          </div>
-          
-          <div>
-            <UCard>
-              <h4 class="font-bold mb-4">
-                What we need from you
-              </h4>
-              <ul class="space-y-3 text-sm font-medium text-secondary">
-                <li class="flex items-center gap-2">
-                  <span class="w-1.5 h-1.5 bg-gray-400 rounded-full opacity-60"></span>
-                  3' x 3' floor space
-                </li>
-                <li class="flex items-center gap-2">
-                  <span class="w-1.5 h-1.5 bg-gray-400 rounded-full opacity-60"></span>
-                  Standard electrical outlet
-                </li>
-                <li class="flex items-center gap-2">
-                  <span class="w-1.5 h-1.5 bg-gray-400 rounded-full opacity-60"></span>
-                  High-traffic common area
-                </li>
-                <li class="flex items-center gap-2">
-                  <span class="w-1.5 h-1.5 bg-gray-400 rounded-full opacity-60"></span>
-                  That's literally it
-                </li>
-              </ul>
-            </UCard>
-          </div>
-        </div>
-      </UContainer>
-    </section>
+    <UPageSection
+      title="Simple process"
+      description="Getting premium provisions in your building is easier than you think. We handle everything from start to finish."
+      orientation="horizontal"
+      reverse
+      :features="processSteps"
+      class="border-t border-default"
+    >
+      <UCard class="w-full">
+        <h4 class="font-bold mb-4">
+          What we need from you
+        </h4>
+        <ul class="space-y-3 text-sm font-medium text-neutral-600">
+          <li class="flex items-center gap-2">
+            <UIcon name="i-lucide-check" class="w-4 h-4 text-primary flex-shrink-0" />
+            3' x 3' floor space
+          </li>
+          <li class="flex items-center gap-2">
+            <UIcon name="i-lucide-check" class="w-4 h-4 text-primary flex-shrink-0" />
+            Standard electrical outlet
+          </li>
+          <li class="flex items-center gap-2">
+            <UIcon name="i-lucide-check" class="w-4 h-4 text-primary flex-shrink-0" />
+            High-traffic common area
+          </li>
+          <li class="flex items-center gap-2">
+            <UIcon name="i-lucide-check" class="w-4 h-4 text-primary flex-shrink-0" />
+            That's literally it
+          </li>
+        </ul>
+      </UCard>
+    </UPageSection>
 
     <!-- CTA Section -->
-    <section class="py-20 md:py-32">
-      <UContainer>
-        <div class="text-center max-w-2xl mx-auto">
-          <h2 class="text-4xl md:text-5xl font-bold mb-6">
-            Ready to add this amenity?
-          </h2>
-          <p class="text-xl text-secondary mb-10 max-w-md mx-auto">
-            Let's discuss how Daybreak can serve your property. Quick conversation, no pressure.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <UButton
-              size="xl"
-            >
-              SCHEDULE A VISIT
-            </UButton>
-            <span class="text-sm font-medium text-muted">
-              or call (804) 555-0100
-            </span>
-          </div>
-          
-          <!-- Subtle gradient accent under CTA -->
-          <div class="mt-16 h-px max-w-xs mx-auto bg-gradient-to-r from-transparent via-purple-500 to-transparent opacity-30"></div>
-        </div>
-      </UContainer>
-    </section>
+    <UPageCTA
+      class="relative overflow-hidden"
+      variant="naked"
+      title="Let's bring quality provisions to your building"
+      description="Schedule a quick visit to see how easy it is to add this amenity. No commitment, just a conversation."
+      orientation="vertical"
+      :links="[
+        { label: 'Schedule Your Consultation', size: 'lg', to: '/consultation' }
+      ]"
+    >
+    </UPageCTA>
 
     <!-- Footer -->
     <UFooter>
@@ -205,7 +113,7 @@
 
       <template #right>
         <div class="text-xs font-medium text-muted">
-          Richmond, VA
+          Made with ☀️ in Richmond, VA
         </div>
       </template>
     </UFooter>
@@ -215,4 +123,42 @@
 <script setup>
 // Computed current year for copyright
 const currentYear = computed(() => new Date().getFullYear())
+
+// Three pillars data
+const pillarsFeatures = ref([
+  {
+    title: 'For Properties',
+    description: 'Add a premium amenity without the overhead. We handle everything from installation to daily operations.',
+    icon: 'i-lucide-building'
+  },
+  {
+    title: 'Always Available',
+    description: '24/7 access to quality food and beverages. Perfect for busy schedules and after-hours needs.',
+    icon: 'i-lucide-clock'
+  },
+  {
+    title: 'Completely Managed',
+    description: 'From restocking to maintenance, we handle it all. You just provide the space.',
+    icon: 'i-lucide-shield-check'
+  }
+])
+
+// Process steps data
+const processSteps = ref([
+  {
+    title: 'Schedule a Visit',
+    description: 'We\'ll assess your space and discuss what works best for your building.',
+    icon: 'i-lucide-calendar'
+  },
+  {
+    title: 'Installation',
+    description: 'We handle delivery and setup. Standard outlet, minimal footprint.',
+    icon: 'i-lucide-wrench'
+  },
+  {
+    title: 'We Take Care of the Rest',
+    description: 'Regular restocking, cleaning, and maintenance. All managed by our team.',
+    icon: 'i-lucide-check-circle'
+  }
+])
 </script>

@@ -38,7 +38,7 @@
   border-radius: 50%;
   filter: blur(40px);
   opacity: 0;
-  animation: sunrise 2s ease-out forwards;
+  animation: sunrise 3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 .sunrise-main {
@@ -46,11 +46,12 @@
   height: 50%;
   background: radial-gradient(
     ellipse at center,
-    rgba(255, 94, 77, 0.15) 0%,
-    rgba(255, 154, 0, 0.1) 20%,
-    rgba(255, 206, 84, 0.05) 35%,
-    rgba(255, 237, 117, 0.02) 50%,
-    transparent 65%
+    rgba(255, 235, 59, 0.22) 0%,      /* golden-yellow center */
+    rgba(252, 211, 77, 0.18) 15%,     /* soft amber-300 */
+    rgba(251, 191, 36, 0.14) 25%,     /* amber-400 transition */
+    rgba(244, 114, 182, 0.1) 40%,     /* pink-400 from logo */
+    rgba(168, 85, 247, 0.05) 55%,     /* purple-500 from logo */
+    transparent 70%
   );
   animation-delay: 0.3s;
 }
@@ -60,9 +61,10 @@
   height: 40%;
   background: radial-gradient(
     ellipse at center,
-    rgba(255, 123, 67, 0.2) 0%,
-    rgba(255, 193, 7, 0.1) 25%,
-    transparent 50%
+    rgba(255, 241, 118, 0.25) 0%,    /* bright golden glow */
+    rgba(252, 211, 77, 0.18) 20%,    /* amber-300 glow */
+    rgba(244, 114, 182, 0.12) 35%,   /* pink-400 subtle */
+    transparent 55%
   );
   filter: blur(60px);
   animation-delay: 0.5s;
@@ -73,9 +75,10 @@
   height: 60%;
   background: radial-gradient(
     ellipse at center,
-    rgba(255, 152, 0, 0.05) 0%,
-    rgba(255, 235, 59, 0.02) 20%,
-    transparent 40%
+    rgba(168, 85, 247, 0.08) 0%,      /* purple-500 rays */
+    rgba(244, 114, 182, 0.05) 15%,    /* pink-400 rays */
+    rgba(252, 211, 77, 0.03) 30%,     /* amber-300 fade */
+    transparent 50%
   );
   filter: blur(80px);
   animation-delay: 0.7s;
@@ -91,15 +94,17 @@
   height: 180px;
   background: radial-gradient(
     circle,
-    rgba(255, 235, 59, 0.3) 0%,
-    rgba(255, 193, 7, 0.2) 20%,
-    rgba(255, 152, 0, 0.1) 40%,
-    transparent 65%
+    rgba(255, 241, 118, 0.35) 0%,    /* bright golden center */
+    rgba(252, 211, 77, 0.28) 15%,    /* golden-amber */
+    rgba(251, 191, 36, 0.18) 30%,    /* amber-400 */
+    rgba(244, 114, 182, 0.1) 45%,    /* pink-400 halo */
+    rgba(168, 85, 247, 0.05) 60%,    /* purple-500 outer */
+    transparent 75%
   );
   border-radius: 50%;
   filter: blur(30px);
   opacity: 0;
-  animation: sunRise 2.5s ease-out 0.8s forwards;
+  animation: sunRise 3.5s cubic-bezier(0.4, 0, 0.2, 1) 0.8s forwards;
 }
 
 /* Light rays */
@@ -111,7 +116,7 @@
   width: 100%;
   height: 50%;
   opacity: 0;
-  animation: fadeIn 1.5s ease-out 1.2s forwards;
+  animation: raysGrowIn 2.5s cubic-bezier(0.4, 0, 0.2, 1) 1.2s forwards;
 }
 
 .ray {
@@ -119,13 +124,15 @@
   bottom: -50px;
   left: 50%;
   transform-origin: bottom center;
-  width: 1px;
+  width: 2px;
   height: 100%;
   background: linear-gradient(
     to top,
-    rgba(255, 235, 59, 0.15),
-    rgba(255, 235, 59, 0.05) 20%,
-    transparent 40%
+    rgba(255, 241, 118, 0.18),      /* golden ray */
+    rgba(252, 211, 77, 0.12) 20%,   /* amber-300 */
+    rgba(244, 114, 182, 0.06) 35%,  /* pink tint */
+    rgba(168, 85, 247, 0.03) 50%,   /* purple fade */
+    transparent 65%
   );
   opacity: 0;
   animation: rayPulse 6s ease-in-out infinite;
@@ -160,28 +167,51 @@
 @keyframes sunrise {
   0% {
     opacity: 0;
-    transform: translateX(-50%) translateY(50px);
+    transform: translateX(-50%) translateY(50px) scale(4);
+  }
+  35% {
+    opacity: 0.85;
+    transform: translateX(-50%) translateY(0) scale(3.5);
   }
   100% {
     opacity: 0.8;
-    transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0) scale(1);
   }
 }
 
 @keyframes sunRise {
   0% {
     opacity: 0;
-    transform: translateX(-50%) translateY(30px);
+    transform: translateX(-50%) translateY(35px) scale(3.2);
+  }
+  35% {
+    opacity: 0.55;
+    transform: translateX(-50%) translateY(0) scale(2.8);
   }
   100% {
     opacity: 0.5;
-    transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0) scale(1);
   }
 }
 
 @keyframes fadeIn {
   to {
     opacity: 0.3;
+  }
+}
+
+@keyframes raysGrowIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) scaleY(2.2);
+  }
+  35% {
+    opacity: 0.35;
+    transform: translateX(-50%) scaleY(1.8);
+  }
+  100% {
+    opacity: 0.3;
+    transform: translateX(-50%) scaleY(1);
   }
 }
 
@@ -198,39 +228,45 @@
 .dark .sunrise-main {
   background: radial-gradient(
     ellipse at center,
-    rgba(255, 94, 77, 0.1) 0%,
-    rgba(255, 154, 0, 0.07) 20%,
-    rgba(255, 206, 84, 0.03) 35%,
-    rgba(255, 237, 117, 0.01) 50%,
-    transparent 65%
+    rgba(255, 235, 59, 0.14) 0%,      /* golden-yellow softer */
+    rgba(252, 211, 77, 0.11) 15%,     /* soft amber-300 */
+    rgba(251, 191, 36, 0.08) 25%,     /* amber-400 transition */
+    rgba(244, 114, 182, 0.06) 40%,    /* pink-400 subtle */
+    rgba(168, 85, 247, 0.03) 55%,     /* purple-500 fade */
+    transparent 70%
   );
 }
 
 .dark .sunrise-glow {
   background: radial-gradient(
     ellipse at center,
-    rgba(255, 123, 67, 0.15) 0%,
-    rgba(255, 193, 7, 0.05) 25%,
-    transparent 50%
+    rgba(255, 241, 118, 0.16) 0%,     /* bright golden glow softer */
+    rgba(252, 211, 77, 0.11) 20%,     /* amber-300 glow */
+    rgba(244, 114, 182, 0.07) 35%,    /* pink-400 subtle */
+    transparent 55%
   );
 }
 
 .dark .sun-disk {
   background: radial-gradient(
     circle,
-    rgba(255, 235, 59, 0.2) 0%,
-    rgba(255, 193, 7, 0.1) 20%,
-    rgba(255, 152, 0, 0.05) 40%,
-    transparent 65%
+    rgba(255, 241, 118, 0.22) 0%,     /* bright golden center softer */
+    rgba(252, 211, 77, 0.17) 15%,     /* golden-amber */
+    rgba(251, 191, 36, 0.11) 30%,     /* amber-400 */
+    rgba(244, 114, 182, 0.06) 45%,    /* pink-400 halo */
+    rgba(168, 85, 247, 0.03) 60%,     /* purple-500 outer */
+    transparent 75%
   );
 }
 
 .dark .ray {
   background: linear-gradient(
     to top,
-    rgba(255, 235, 59, 0.1),
-    rgba(255, 235, 59, 0.03) 20%,
-    transparent 40%
+    rgba(255, 241, 118, 0.1),         /* golden ray */
+    rgba(252, 211, 77, 0.07) 20%,     /* amber-300 */
+    rgba(244, 114, 182, 0.04) 35%,    /* pink tint */
+    rgba(168, 85, 247, 0.02) 50%,     /* purple fade */
+    transparent 65%
   );
 }
 

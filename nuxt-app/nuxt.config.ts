@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxt/eslint', '@nuxt/ui', '@nuxt/image'],
+  modules: ['@nuxt/eslint', '@nuxt/ui', '@nuxt/image', '@nuxtjs/supabase'],
 
   devtools: {
     enabled: true
@@ -22,6 +22,18 @@ export default defineNuxtConfig({
       }
     }
   },
+
+  // Supabase configuration
+  supabase: {
+    // Disable auth redirects since we're not using authentication
+    redirect: false,
+    // Keep SSR cookies enabled for proper SSR support (default behavior)
+    // Even without auth, this ensures proper context sharing between server and client
+    // We'll primarily use the service key for server-side operations
+    url: process.env.SUPABASE_URL,
+    key: process.env.SUPABASE_KEY,
+    serviceKey: process.env.SUPABASE_SERVICE_KEY
+  },
   
   // Force light mode only
   colorMode: {
@@ -29,6 +41,16 @@ export default defineNuxtConfig({
     fallback: 'light',      // Fallback to light mode
     dataValue: 'light',     // Value to use for light mode
     classSuffix: ''         // No suffix for light mode class
+  },
+
+  // Vite configuration to fix cookie module ESM compatibility
+  vite: {
+    optimizeDeps: {
+      include: ['cookie']
+    },
+    ssr: {
+      noExternal: ['cookie']
+    }
   },
 
   app: {
