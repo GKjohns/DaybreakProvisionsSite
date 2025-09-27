@@ -14,6 +14,7 @@
           to="/consultation"
           variant="outline"
           size="md"
+          trailing-icon="i-lucide-arrow-right"
         >
           Get Started
         </UButton>
@@ -31,7 +32,7 @@
         description="We bring smart coolers to your building with fresh food and drinks. No installation fees, no maintenance hassles - just quality provisions when your people need them."
         orientation="vertical"
       :links="[
-        { label: 'Schedule Your Consultation', size: 'xl', to: '/consultation' }
+        { label: 'Get Started', size: 'xl', to: '/consultation' }
       ]"
       />
     </div>
@@ -90,11 +91,11 @@
     <UPageCTA
       class="relative overflow-hidden"
       variant="naked"
-      title="Let's bring quality provisions to your building"
-      description="Schedule a quick visit to see how easy it is to add this amenity. No commitment, just a conversation."
+      title="Ready to elevate your space?"
+      description="Schedule a quick visit to see how easy it is to add this premium amenity. No commitment, just a conversation."
       orientation="vertical"
       :links="[
-        { label: 'Schedule Your Consultation', size: 'lg', to: '/consultation' }
+        { label: 'Get Started', size: 'lg', to: '/consultation' }
       ]"
     >
     </UPageCTA>
