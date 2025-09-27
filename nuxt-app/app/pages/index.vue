@@ -11,8 +11,11 @@
     </UHeader>
 
     <!-- Hero Section -->
-    <section class="py-20 md:py-32">
-      <UContainer>
+    <section class="py-20 md:py-32 relative overflow-hidden">
+      <!-- Sunrise Background Effect -->
+      <HeroBackground />
+      
+      <UContainer class="relative z-10">
         <div class="text-center max-w-2xl mx-auto">
           <h1 class="hero-title mb-6 text-primary">
             Quality provisions.<br/>
