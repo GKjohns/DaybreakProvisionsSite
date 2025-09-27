@@ -110,3 +110,35 @@ p {
   @apply text-sm uppercase tracking-widest;
   opacity: 0.5;
 }
+
+/* Highlighted text styling */
+mark {
+  background-color: rgba(251, 191, 36, 0.3); /* Amber 400 with 30% opacity */
+  color: inherit; /* Keep text color unchanged */
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.125rem;
+}
+
+.dark mark {
+  background-color: rgba(252, 211, 77, 0.25); /* Amber 300 with 25% opacity for dark mode */
+}
+
+/* Text selection styling */
+::selection {
+  background-color: rgba(251, 191, 36, 0.35); /* Amber 400 with 35% opacity */
+  color: inherit;
+}
+
+.dark ::selection {
+  background-color: rgba(252, 211, 77, 0.3); /* Amber 300 with 30% opacity for dark mode */
+}
+
+/* Firefox specific selection */
+::-moz-selection {
+  background-color: rgba(251, 191, 36, 0.35);
+  color: inherit;
+}
+
+.dark ::-moz-selection {
+  background-color: rgba(252, 211, 77, 0.3);
+}

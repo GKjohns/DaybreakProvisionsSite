@@ -8,10 +8,6 @@
       <template #title>
         <AppLogo />
       </template>
-
-      <template #right>
-        <UColorModeButton />
-      </template>
     </UHeader>
 
     <!-- Hero Section -->

@@ -22,6 +22,14 @@ export default defineNuxtConfig({
       }
     }
   },
+  
+  // Force light mode only
+  colorMode: {
+    preference: 'light',    // Force light mode
+    fallback: 'light',      // Fallback to light mode
+    dataValue: 'light',     // Value to use for light mode
+    classSuffix: ''         // No suffix for light mode class
+  },
 
   app: {
     head: {
