@@ -70,17 +70,23 @@
     <!-- Hero Section -->
     <div class="relative overflow-hidden">
       <!-- Sunrise Background Effect -->
-      <HeroBackground />
+      <!-- <HeroBackground /> -->
       
       <UPageHero
         class="relative z-10"
         title="Professional home cleaning you can trust."
         description="Richmond's premier residential cleaning service. We bring sparkle to your home with eco-friendly products, trained professionals, and attention to every detail."
-        orientation="vertical"
+        orientation="horizontal"
         :links="[
           { label: 'Get Started', size: 'xl', onClick: () => isContactOpen = true }
         ]"
-      />
+      >
+        <img 
+          src="/adam-winger-PCDlE94JjcI-unsplash.jpg"
+          alt="Modern kitchen with black wooden table and chairs"
+          class="rounded-lg shadow-2xl ring ring-default"
+        />
+      </UPageHero>
     </div>
 
     <!-- Residential Cleaning Section -->
