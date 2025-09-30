@@ -5,7 +5,7 @@
 
     <!-- Navigation -->
     <UHeader>
-      <template #title>
+      <template #left>
         <AppLogo />
       </template>
       
@@ -17,13 +17,12 @@
           description="We'd love to hear from you. Send us a message and we'll get back to you soon."
           :ui="{ footer: 'justify-end' }"
         >
-          <UButton 
+          <!-- <UButton 
             variant="outline"
-            size="md"
             icon="i-lucide-message-circle"
           >
             Get Started
-          </UButton>
+          </UButton> -->
           
           <template #body>
             <div class="space-y-6">
