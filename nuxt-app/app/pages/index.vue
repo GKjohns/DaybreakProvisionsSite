@@ -79,8 +79,8 @@
       ]"
     >
       <img 
-        src="/adam-winger-PCDlE94JjcI-unsplash.jpg"
-        alt="Modern kitchen with black wooden table and chairs"
+        src="/hero-image.png"
+        alt="Person organizing items on wooden shelves in a bright, clean modern kitchen with white farmhouse sink, natural wood cabinetry, and green plants"
         class="rounded-lg shadow-2xl ring ring-default"
       />
     </UPageHero>
