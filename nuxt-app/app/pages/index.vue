@@ -68,26 +68,22 @@
     </UHeader>
 
     <!-- Hero Section -->
-    <div class="relative overflow-hidden">
-      <!-- Sunrise Background Effect -->
-      <!-- <HeroBackground /> -->
       
-      <UPageHero
-        class="relative z-10"
-        title="Professional home cleaning you can trust."
-        description="Richmond's premier residential cleaning service. We bring sparkle to your home with eco-friendly products, trained professionals, and attention to every detail."
-        orientation="horizontal"
-        :links="[
-          { label: 'Get Started', size: 'xl', onClick: () => isContactOpen = true }
-        ]"
-      >
-        <img 
-          src="/adam-winger-PCDlE94JjcI-unsplash.jpg"
-          alt="Modern kitchen with black wooden table and chairs"
-          class="rounded-lg shadow-2xl ring ring-default"
-        />
-      </UPageHero>
-    </div>
+    <UPageHero
+      class="relative z-10"
+      title="Professional home cleaning you can trust."
+      description="Richmond's premier residential cleaning service. We bring sparkle to your home with eco-friendly products, trained professionals, and attention to every detail."
+      orientation="horizontal"
+      :links="[
+        { label: 'Get Started', size: 'xl', onClick: () => isContactOpen = true }
+      ]"
+    >
+      <img 
+        src="/adam-winger-PCDlE94JjcI-unsplash.jpg"
+        alt="Modern kitchen with black wooden table and chairs"
+        class="rounded-lg shadow-2xl ring ring-default"
+      />
+    </UPageHero>
 
     <!-- Residential Cleaning Section -->
     <UContainer class="py-16 lg:py-24">
