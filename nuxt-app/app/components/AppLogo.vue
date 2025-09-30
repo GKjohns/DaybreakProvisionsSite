@@ -6,7 +6,7 @@
         DAYBREAK
       </span>
       <span class="text-lg font-normal text-gray-600 dark:text-gray-400">
-        PROVISIONS
+        CLEANING
       </span>
     </div>
   </div>

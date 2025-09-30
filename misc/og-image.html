@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daybreak Provisions OG Image</title>
+    <title>Daybreak Cleaning OG Image</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -26,7 +26,7 @@
         .og-container {
             width: 1200px;
             height: 630px;
-            background: white;
+            background: #ffffff;
             border: 2px solid #333;
             display: flex;
             flex-direction: column;
@@ -34,6 +34,48 @@
             align-items: center;
             position: relative;
             overflow: hidden;
+        }
+
+        /* Sunrise rays effect */
+        .sunrise-rays {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            opacity: 0.1;
+        }
+
+        .ray {
+            position: absolute;
+            bottom: -50%;
+            left: 50%;
+            width: 200%;
+            height: 200%;
+            transform-origin: bottom center;
+        }
+
+        .ray-1 {
+            background: linear-gradient(to top, #FBB024, transparent 40%);
+            transform: translateX(-50%) rotate(-30deg);
+        }
+
+        .ray-2 {
+            background: linear-gradient(to top, #D97706, transparent 40%);
+            transform: translateX(-50%) rotate(-15deg);
+        }
+
+        .ray-3 {
+            background: linear-gradient(to top, #EC4899, transparent 40%);
+            transform: translateX(-50%) rotate(0deg);
+        }
+
+        .ray-4 {
+            background: linear-gradient(to top, #9333EA, transparent 40%);
+            transform: translateX(-50%) rotate(15deg);
+        }
+
+        .ray-5 {
+            background: linear-gradient(to top, #FBB024, transparent 40%);
+            transform: translateX(-50%) rotate(30deg);
         }
 
         .racing-stripes {
@@ -52,26 +94,35 @@
         }
 
         .stripe-1 {
-            background: #fbbf24;  /* Amber 400 */
+            background: #FBB024;  /* Yellow/Amber */
         }
 
         .stripe-2 {
-            background: #d97706;  /* Amber 600 */
+            background: #D97706;  /* Orange */
         }
 
         .stripe-3 {
-            background: #dc267f;  /* Pink */
+            background: #EC4899;  /* Pink */
         }
 
         .stripe-4 {
-            background: #9333ea;  /* Purple 600 */
+            background: #9333EA;  /* Purple */
+        }
+
+        .content-wrapper {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
         }
 
         .logo-container {
             display: flex;
             align-items: baseline;
             gap: 16px;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
         }
 
         .logo-primary {
@@ -87,28 +138,84 @@
             color: #6b7280;
         }
 
-        .catchphrase {
-            font-size: 44px;
+        .tagline {
+            font-size: 48px;
+            font-weight: 600;
+            color: #111827;
+            text-align: center;
+            line-height: 1.2;
+            max-width: 900px;
+            letter-spacing: -0.01em;
+            margin-bottom: 12px;
+        }
+
+        .subtitle {
+            font-size: 26px;
             font-weight: 400;
             color: #6b7280;
             text-align: center;
+            max-width: 800px;
             line-height: 1.4;
-            max-width: 900px;
-            letter-spacing: 0.02em;
+        }
+
+        .sparkle-icon {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            opacity: 0.2;
+        }
+
+        .sparkle-1 {
+            top: 80px;
+            right: 200px;
+            transform: rotate(15deg);
+        }
+
+        .sparkle-2 {
+            bottom: 80px;
+            left: 200px;
+            transform: rotate(-20deg);
+        }
+
+        .sparkle-3 {
+            top: 120px;
+            left: 300px;
+            transform: rotate(25deg);
+        }
+
+        .sparkle {
+            fill: #9333EA;
         }
     </style>
 </head>
 <body>
     <div class="og-container">
-        <!-- Logo -->
-        <div class="logo-container">
-            <span class="logo-primary">DAYBREAK</span>
-            <span class="logo-secondary">PROVISIONS</span>
+        <!-- Sunrise rays background -->
+        <div class="sunrise-rays">
+            <div class="ray ray-1"></div>
+            <div class="ray ray-2"></div>
+            <div class="ray ray-3"></div>
+            <div class="ray ray-4"></div>
+            <div class="ray ray-5"></div>
         </div>
         
-        <!-- Catchphrase -->
-        <div class="catchphrase">
-            Quality provisions.<br>Zero overhead.
+        <!-- Content -->
+        <div class="content-wrapper">
+            <!-- Logo -->
+            <div class="logo-container">
+                <span class="logo-primary">DAYBREAK</span>
+                <span class="logo-secondary">CLEANING</span>
+            </div>
+            
+            <!-- Tagline -->
+            <div class="tagline">
+                Professional home cleaning<br>you can trust.
+            </div>
+            
+            <!-- Subtitle -->
+            <div class="subtitle">
+                Richmond's premier residential cleaning service
+            </div>
         </div>
         
         <!-- Racing stripes -->
@@ -118,6 +225,19 @@
             <div class="stripe stripe-3"></div>
             <div class="stripe stripe-4"></div>
         </div>
+        
+        <!-- Sparkle decorations -->
+        <svg class="sparkle-icon sparkle-1" viewBox="0 0 24 24" fill="none">
+            <path class="sparkle" d="M12 2L13.09 8.26L19 9L13.09 9.74L12 16L10.91 9.74L5 9L10.91 8.26L12 2Z" />
+        </svg>
+        
+        <svg class="sparkle-icon sparkle-2" viewBox="0 0 24 24" fill="none">
+            <path class="sparkle" d="M12 2L13.09 8.26L19 9L13.09 9.74L12 16L10.91 9.74L5 9L10.91 8.26L12 2Z" />
+        </svg>
+        
+        <svg class="sparkle-icon sparkle-3" viewBox="0 0 24 24" fill="none">
+            <path class="sparkle" d="M12 2L13.09 8.26L19 9L13.09 9.74L12 16L10.91 9.74L5 9L10.91 8.26L12 2Z" />
+        </svg>
     </div>
 </body>
 </html>

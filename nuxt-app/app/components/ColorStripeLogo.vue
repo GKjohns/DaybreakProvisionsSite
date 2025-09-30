@@ -38,54 +38,64 @@ const svgSize = computed(() => {
   display: block;
 }
 
-/* Light mode colors */
+/* Light mode colors - vibrant daybreak theme */
 .stripe-1 {
-  fill: rgb(251 191 36 / 0.7); /* amber-400 with opacity */
+  fill: #FBB024; /* Yellow/Amber */
+  opacity: 0.8;
 }
 
 .stripe-2 {
-  fill: rgb(217 119 6 / 0.7); /* amber-600 with opacity */
+  fill: #D97706; /* Orange */
+  opacity: 0.8;
 }
 
 .stripe-3 {
-  fill: rgb(236 72 153 / 0.7); /* pink-500 with opacity */
+  fill: #EC4899; /* Pink */
+  opacity: 0.8;
 }
 
 .stripe-4 {
-  fill: rgb(147 51 234 / 0.7); /* purple-600 with opacity */
+  fill: #9333EA; /* Purple */
+  opacity: 0.8;
 }
 
-/* Dark mode colors - softer, more muted versions */
+/* Dark mode colors - slightly brighter for visibility */
 @media (prefers-color-scheme: dark) {
   .stripe-1 {
-    fill: rgb(252 211 77 / 0.8); /* amber-300 with higher opacity */
+    fill: #FBB024; /* Yellow/Amber */
+    opacity: 0.9;
   }
 
   .stripe-2 {
-    fill: rgb(245 158 11 / 0.8); /* amber-500 with higher opacity */
+    fill: #D97706; /* Orange */
+    opacity: 0.9;
   }
 
   .stripe-3 {
-    fill: rgb(244 114 182 / 0.8); /* pink-400 with higher opacity */
+    fill: #EC4899; /* Pink */
+    opacity: 0.9;
   }
 
   .stripe-4 {
-    fill: rgb(168 85 247 / 0.8); /* purple-500 with higher opacity */
+    fill: #9333EA; /* Purple */
+    opacity: 0.9;
   }
 }
 
 /* Alternative: Using CSS custom properties that respect the color mode */
 :root {
-  --stripe-1-color: rgb(251 191 36 / 0.7);
-  --stripe-2-color: rgb(217 119 6 / 0.7);
-  --stripe-3-color: rgb(236 72 153 / 0.7);
-  --stripe-4-color: rgb(147 51 234 / 0.7);
+  --stripe-1-color: #FBB024;
+  --stripe-2-color: #D97706;
+  --stripe-3-color: #EC4899;
+  --stripe-4-color: #9333EA;
+  --stripe-opacity: 0.8;
 }
 
 :root.dark {
-  --stripe-1-color: rgb(252 211 77 / 0.8);
-  --stripe-2-color: rgb(245 158 11 / 0.8);
-  --stripe-3-color: rgb(244 114 182 / 0.8);
-  --stripe-4-color: rgb(168 85 247 / 0.8);
+  --stripe-1-color: #FBB024;
+  --stripe-2-color: #D97706;
+  --stripe-3-color: #EC4899;
+  --stripe-4-color: #9333EA;
+  --stripe-opacity: 0.9;
 }
 </style>
