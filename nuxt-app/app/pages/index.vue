@@ -74,7 +74,8 @@
       description="Richmond's premier residential cleaning service. We bring sparkle to your home with eco-friendly products, trained professionals, and attention to every detail."
       orientation="horizontal"
       :links="[
-        { label: 'Get Started', size: 'xl', onClick: () => isContactOpen = true }
+        { label: 'Book Now', size: 'xl', to: 'https://app.squareup.com/appointments/buyer/widget/pp7iiefnbd7vqp/LNCHM239FSDW9', target: '_blank' },
+        { label: 'Reach Out', size: 'xl', color: 'neutral', variant: 'outline', onClick: () => { isContactOpen = true } }
       ]"
     >
       <img 
@@ -255,7 +256,8 @@
       description="Join hundreds of Richmond families who trust Daybreak Cleaning. Get your free quote today."
       orientation="vertical"
       :links="[
-        { label: 'Contact Us', size: 'lg', onClick: () => isContactOpen = true }
+        { label: 'Book Now', size: 'lg', to: 'https://app.squareup.com/appointments/buyer/widget/pp7iiefnbd7vqp/LNCHM239FSDW9', target: '_blank' },
+        { label: 'Contact Us', size: 'lg', color: 'neutral', variant: 'outline', onClick: () => { isContactOpen = true } }
       ]"
     />
 
