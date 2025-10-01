@@ -85,6 +85,19 @@
       />
     </UPageHero>
 
+    <!-- Square Appointments Booking Widget -->
+    <UContainer class="py-16 lg:py-24">
+      <div class="text-center mb-8">
+        <h2 class="text-3xl lg:text-4xl font-bold mb-4">
+          Book Your Appointment
+        </h2>
+        <p class="text-lg text-gray-600 dark:text-gray-300">
+          Choose your service and schedule a time that works for you.
+        </p>
+      </div>
+      <SquareAppointments />
+    </UContainer>
+
     <!-- Residential Cleaning Section -->
     <UContainer class="py-16 lg:py-24">
       <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
