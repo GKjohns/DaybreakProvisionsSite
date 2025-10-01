@@ -89,10 +89,10 @@
     <UContainer class="py-16 lg:py-24">
       <div class="text-center mb-8">
         <h2 class="text-3xl lg:text-4xl font-bold mb-4">
-          Book Your Appointment
+          Book Your Cleaning in Minutes
         </h2>
         <p class="text-lg text-gray-600 dark:text-gray-300">
-          Choose your service and schedule a time that works for you.
+          Simple online booking—pick your service, choose a time that fits your schedule, and you're all set. No phone calls needed.
         </p>
       </div>
       <SquareAppointments />
@@ -406,22 +406,34 @@
       </div>
     </UContainer>
 
-    <!-- Services Section -->
-    <UPageSection
-      title="Our cleaning services"
-      description="Choose the service that fits your needs. All services include our signature attention to detail."
-      orientation="vertical"
-      :features="servicesFeatures"
-      class="border-t border-default"
-    />
+    <!-- FAQ Section -->
+    <UContainer class="py-16 lg:py-24 border-t border-gray-200 dark:border-gray-800">
+      <div class="max-w-3xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl lg:text-4xl font-bold mb-4">
+            Frequently Asked Questions
+          </h2>
+          <p class="text-lg text-gray-600 dark:text-gray-300">
+            Have questions? We've got answers. If you don't see what you're looking for, feel free to reach out.
+          </p>
+        </div>
+        
+        <UAccordion 
+          type="multiple"
+          :items="faqItems"
+          :ui="{
+            trigger: 'text-base',
+            body: 'text-base text-muted'
+          }"
+        />
+      </div>
+    </UContainer>
 
     <!-- CTA Section -->
     <UPageCTA
       class="relative overflow-hidden"
-      variant="naked"
-      title="Ready for a cleaner home?"
-      description="Join hundreds of Richmond families who trust Daybreak Cleaning. Get your free quote today."
-      orientation="vertical"
+      title="A Spotless Home is Just a Click Away"
+      description="Richmond's most trusted cleaning service. Book online in under 2 minutes—no quotes, no hassle, just a cleaner home waiting for you."
       :links="[
         { label: 'Book Now', size: 'lg', to: 'https://app.squareup.com/appointments/buyer/widget/pp7iiefnbd7vqp/LNCHM239FSDW9', target: '_blank' },
         { label: 'Contact Us', size: 'lg', color: 'neutral', variant: 'outline', onClick: () => { isContactOpen = true } }
@@ -513,27 +525,42 @@ async function submitForm() {
   }
 }
 
-// Services data
-const servicesFeatures = ref([
+// FAQ data
+const faqItems = ref([
   {
-    title: 'Regular Cleaning',
-    description: 'Our most popular service. Keep your home consistently clean with weekly or bi-weekly visits.',
-    icon: 'i-lucide-refresh-cw'
+    label: 'What services do you offer?',
+    icon: 'i-lucide-sparkles',
+    content: 'We offer regular house cleaning, deep cleaning, move-in/out cleaning, carpet cleaning, and specialized services like kitchen and bathroom deep cleans. We can also create custom cleaning plans based on your specific needs.'
   },
   {
-    title: 'Deep Cleaning',
-    description: 'Perfect for first-time customers or seasonal refreshes. We clean every corner and crevice.',
-    icon: 'i-lucide-sparkles'
+    label: 'How do you price your services?',
+    icon: 'i-lucide-tag',
+    content: 'Pricing varies based on the size of your home, the type of service, and frequency. We offer transparent pricing through our booking system where you can select your home size and service type to see exact costs upfront.'
   },
   {
-    title: 'Move In/Out Cleaning',
-    description: 'Comprehensive cleaning for moves. Leave your old place spotless or start fresh in your new home.',
-    icon: 'i-lucide-truck'
+    label: 'Do you use eco-friendly products?',
+    icon: 'i-lucide-leaf',
+    content: 'Yes! We prioritize eco-friendly, non-toxic cleaning products that are safe for your family, pets, and the environment. Our green cleaning solutions are effective against dirt and germs while being gentle on your home.'
   },
   {
-    title: 'Custom Cleaning',
-    description: 'Have specific needs? We can create a custom cleaning plan that fits your requirements and budget.',
-    icon: 'i-lucide-settings'
+    label: 'Do I need to be home during the cleaning?',
+    icon: 'i-lucide-home',
+    content: 'No, you don\'t need to be home. Many of our clients provide us with access to their homes and go about their day. Our team is trained to work independently with professionalism and respect for your space.'
+  },
+  {
+    label: 'How far in advance should I book?',
+    icon: 'i-lucide-calendar',
+    content: 'We recommend booking at least a week in advance for regular cleaning services. For move-out cleanings or urgent requests, we often have same-week availability. Check our booking calendar for current openings.'
+  },
+  {
+    label: 'What if I need to reschedule or cancel?',
+    icon: 'i-lucide-calendar-x',
+    content: 'We understand that plans change. Please notify us at least 24 hours in advance if you need to reschedule or cancel your appointment. This helps us accommodate other customers and maintain our schedule.'
+  },
+  {
+    label: 'What areas do you serve?',
+    icon: 'i-lucide-map-pin',
+    content: 'We proudly serve the Richmond, VA metropolitan area. If you\'re unsure whether we service your location, please reach out and we\'ll let you know.'
   }
 ])
 </script>
