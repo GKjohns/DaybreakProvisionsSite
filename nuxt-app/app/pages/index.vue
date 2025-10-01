@@ -252,6 +252,160 @@
       </div>
     </UContainer>
 
+    <!-- Carpet Cleaning Section -->
+    <UContainer class="py-16 lg:py-24 border-t border-gray-200 dark:border-gray-800">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <!-- Text Content (Left) -->
+        <div class="space-y-6">
+          <div>
+            <h2 class="text-3xl lg:text-4xl font-bold mb-4">
+              Professional Carpet Cleaning
+            </h2>
+            <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">
+              Refresh your carpets and improve your home's air quality. Our professional carpet cleaning removes deep-seated dirt, stains, and odors that regular vacuuming can't reach.
+            </p>
+          </div>
+          
+          <div class="space-y-4">
+            <div class="flex gap-4">
+              <UIcon name="i-lucide-droplet" class="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+              <div>
+                <h3 class="font-semibold mb-1">Deep Stain Removal</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">
+                  Tackle tough stains from pets, spills, and daily wear. Our cleaning process penetrates deep into carpet fibers for thorough results.
+                </p>
+              </div>
+            </div>
+            
+            <div class="flex gap-4">
+              <UIcon name="i-lucide-wind" class="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+              <div>
+                <h3 class="font-semibold mb-1">Improved Air Quality</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">
+                  Remove allergens, dust mites, and trapped pollutants from your carpets to create a healthier home environment.
+                </p>
+              </div>
+            </div>
+            
+            <div class="flex gap-4">
+              <UIcon name="i-lucide-timer" class="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+              <div>
+                <h3 class="font-semibold mb-1">Extended Carpet Life</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">
+                  Regular professional cleaning helps maintain your carpet's appearance and extends its lifespan, protecting your investment.
+                </p>
+              </div>
+            </div>
+            
+            <div class="flex gap-4">
+              <UIcon name="i-lucide-leaf" class="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+              <div>
+                <h3 class="font-semibold mb-1">Safe Cleaning Solutions</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">
+                  We use eco-friendly products that are tough on stains but gentle on your carpets and safe for your family and pets.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="pt-4">
+            <UButton size="lg" @click="isContactOpen = true">
+              Get a Quote
+            </UButton>
+          </div>
+        </div>
+        
+        <!-- Image (Right) -->
+        <div class="relative">
+          <div class="aspect-[4/3] rounded-xl overflow-hidden shadow-xl">
+            <img 
+              src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&h=600&fit=crop&q=80"
+              alt="Clean, plush carpet in modern home interior"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </UContainer>
+
+    <!-- Eco-Friendly Practices Section -->
+    <UContainer class="py-16 lg:py-24 border-t border-gray-200 dark:border-gray-800">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <!-- Image (Left) -->
+        <div class="relative order-2 lg:order-1">
+          <div class="aspect-[4/3] rounded-xl overflow-hidden shadow-xl">
+            <img 
+              src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=600&fit=crop&q=80"
+              alt="Lush green forest with sunlight streaming through trees"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+        
+        <!-- Text Content (Right) -->
+        <div class="space-y-6 order-1 lg:order-2">
+          <div>
+            <h2 class="text-3xl lg:text-4xl font-bold mb-4">
+              Eco-Friendly Cleaning Practices
+            </h2>
+            <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">
+              We care about your health and the environment. Our cleaning approach uses safer products and sustainable practices without compromising on cleanliness.
+            </p>
+          </div>
+          
+          <div class="space-y-4">
+            <div class="flex gap-4">
+              <UIcon name="i-lucide-shield" class="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+              <div>
+                <h3 class="font-semibold mb-1">Family & Pet Safe Products</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">
+                  We use cleaning products that are safer for your family and pets, without harsh fumes or toxic residues.
+                </p>
+              </div>
+            </div>
+            
+            <div class="flex gap-4">
+              <UIcon name="i-lucide-sparkle" class="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+              <div>
+                <h3 class="font-semibold mb-1">Effective Cleaning Power</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">
+                  Green doesn't mean weak. Our eco-friendly products effectively tackle dirt, grime, and bacteria while being gentler on surfaces.
+                </p>
+              </div>
+            </div>
+            
+            <div class="flex gap-4">
+              <UIcon name="i-lucide-recycle" class="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+              <div>
+                <h3 class="font-semibold mb-1">Reduced Environmental Impact</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">
+                  We minimize waste and use microfiber cloths that reduce the need for disposable products and excess chemicals.
+                </p>
+              </div>
+            </div>
+            
+            <div class="flex gap-4">
+              <UIcon name="i-lucide-heart" class="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+              <div>
+                <h3 class="font-semibold mb-1">Better Indoor Air Quality</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">
+                  By avoiding harsh chemical cleaners, we help maintain cleaner air in your home, especially important for those with allergies or sensitivities.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="pt-4">
+            <UButton size="lg" @click="isContactOpen = true">
+              Learn More
+            </UButton>
+          </div>
+        </div>
+      </div>
+    </UContainer>
+
     <!-- Services Section -->
     <UPageSection
       title="Our cleaning services"
