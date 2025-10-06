@@ -84,6 +84,39 @@
         />
       </UPageHero>
 
+      <!-- Testimonial Section -->
+      <UContainer class="py-12 lg:py-16">
+        <div class="max-w-2xl mx-auto">
+          <UCard>
+            <div class="flex flex-col items-center text-center space-y-4">
+              <!-- Star Rating -->
+              <div class="flex gap-1">
+                <UIcon v-for="i in 5" :key="i" name="i-heroicons-star-solid" class="w-6 h-6 text-amber-400" />
+              </div>
+              
+              <!-- Review Text -->
+              <p class="text-lg text-gray-700 dark:text-gray-300">
+                "Amazing work by George (Kyle) awesome guy and did an amazing job!!!"
+              </p>
+              
+              <!-- Reviewer Info -->
+              <div class="pt-2 space-y-2">
+                <div class="flex items-center justify-center gap-2">
+                  <p class="font-semibold text-gray-900 dark:text-gray-100">Mac M.</p>
+                  <UBadge color="success" variant="subtle" class="gap-1">
+                    <UIcon name="i-heroicons-check-badge-solid" class="w-4 h-4" />
+                    Verified Customer
+                  </UBadge>
+                </div>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                  House Cleaning · Fredericksburg, VA
+                </p>
+              </div>
+            </div>
+          </UCard>
+        </div>
+      </UContainer>
+
       <!-- Square Appointments Booking Widget -->
       <UContainer class="py-16 lg:py-24">
         <div class="text-center mb-8">
