@@ -1,0 +1,13 @@
+# Robots.txt for Daybreak Cleaning
+# https://www.daybreakrva.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.daybreakrva.com/sitemap.xml
+
+# Crawl-delay (optional, prevents aggressive crawling)
+Crawl-delay: 1
+
+

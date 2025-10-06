@@ -69,9 +69,8 @@
     <UMain>
       <!-- Hero Section -->
       <UPageHero
-        class="relative z-10"
         title="Professional home cleaning you can trust."
-        description="Richmond's premier residential cleaning service. We bring sparkle to your home with eco-friendly products, trained professionals, and attention to every detail."
+        description="We bring sparkle to your home with eco-friendly products, trained professionals, and attention to every detail."
         orientation="horizontal"
         :links="[
           { label: 'Book Now', size: 'xl', to: 'https://app.squareup.com/appointments/buyer/widget/pp7iiefnbd7vqp/LNCHM239FSDW9', target: '_blank' },
@@ -433,7 +432,7 @@
       <UPageCTA
         class="relative overflow-hidden"
         title="A Spotless Home is Just a Click Away"
-        description="Richmond's most trusted cleaning service. Book online in under 2 minutes—no quotes, no hassle, just a cleaner home waiting for you."
+        description="Book online in under 2 minutes—no quotes, no hassle, just a cleaner home waiting for you."
         :links="[
           { label: 'Book Now', size: 'lg', to: 'https://app.squareup.com/appointments/buyer/widget/pp7iiefnbd7vqp/LNCHM239FSDW9', target: '_blank' },
           { label: 'Contact Us', size: 'lg', color: 'neutral', variant: 'outline', onClick: () => { isContactOpen = true } }
@@ -463,6 +462,20 @@
 
 <script setup lang="ts">
 import type { FormError, FormSubmitEvent } from '@nuxt/ui'
+
+// SEO optimization for homepage
+useSeoMeta({
+  title: 'Professional Home Cleaning Service in Richmond VA | Daybreak Cleaning',
+  description: 'Professional cleaning service in Richmond VA offering residential cleaning, deep cleaning, move-in/out, carpet cleaning, and specialty services. Eco-friendly products, online booking, same-week availability.',
+  ogTitle: 'Daybreak Cleaning - Professional Home Cleaning Service in Richmond VA',
+  ogDescription: 'Professional home cleaning you can trust. Regular house cleaning, deep cleaning, move-in/out, carpet cleaning, and more. Book online in minutes.',
+  ogImage: 'https://www.daybreakrva.com/og-image.png',
+  ogUrl: 'https://www.daybreakrva.com',
+  twitterTitle: 'Daybreak Cleaning - Richmond VA Home Cleaning Service',
+  twitterDescription: 'Professional, eco-friendly home cleaning in Richmond VA. Regular cleaning, deep cleaning, move-in/out, carpet cleaning & more. Book online today!',
+  twitterImage: 'https://www.daybreakrva.com/og-image.png',
+  twitterCard: 'summary_large_image'
+})
 
 // Computed current year for copyright
 const currentYear = computed(() => new Date().getFullYear())

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://www.daybreakrva.com/</loc>
+    <lastmod>2025-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.daybreakrva.com/og-image.png</image:loc>
+      <image:title>Daybreak Cleaning - Professional Home Cleaning Service</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.daybreakrva.com/hero-image.png</image:loc>
+      <image:title>Clean organized kitchen with natural light</image:title>
+    </image:image>
+  </url>
+
+</urlset>
+
+

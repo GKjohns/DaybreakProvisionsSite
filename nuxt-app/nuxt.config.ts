@@ -72,8 +72,8 @@ export default defineNuxtConfig({
         { name: 'format-detection', content: 'telephone=no' },
         
         // SEO meta tags - enhanced for local search
-        { name: 'description', content: 'Trusted residential cleaning service in Richmond, VA. Eco-friendly products, background-checked professionals, flexible scheduling. Weekly, bi-weekly & monthly plans. Call (804) 555-0100 for free quote!' },
-        { name: 'keywords', content: 'house cleaning Richmond VA, residential cleaning service, home cleaners near me, maid service Richmond, eco-friendly cleaning, professional house cleaning, deep cleaning service, move in out cleaning, bi-weekly cleaning, trusted cleaners Richmond Virginia' },
+        { name: 'description', content: 'Richmond VA\'s trusted cleaning service. Regular house cleaning, deep cleaning, move-in/out, carpet cleaning, kitchen & bathroom deep cleans, and post-renovation cleaning. Eco-friendly products. Book online today!' },
+        { name: 'keywords', content: 'house cleaning Richmond VA, residential cleaning service, carpet cleaning Richmond, deep cleaning service, move out cleaning, post renovation cleaning, kitchen deep clean, bathroom cleaning, eco-friendly cleaning, professional house cleaning, maid service Richmond, home cleaners Richmond Virginia, property management cleaning' },
         { name: 'author', content: 'Daybreak Cleaning LLC' },
         { name: 'geo.region', content: 'US-VA' },
         { name: 'geo.placename', content: 'Richmond' },
@@ -199,8 +199,9 @@ export default defineNuxtConfig({
                   '@type': 'Offer',
                   itemOffered: {
                     '@type': 'Service',
-                    name: 'Regular Cleaning',
-                    description: 'Weekly or bi-weekly house cleaning service'
+                    name: 'Regular House Cleaning',
+                    description: 'Professional cleaning for your home on a recurring schedule. Dust, vacuum, mop, and sanitize all living areas, kitchens, and bathrooms.',
+                    serviceType: 'Residential Cleaning'
                   }
                 },
                 {
@@ -208,7 +209,8 @@ export default defineNuxtConfig({
                   itemOffered: {
                     '@type': 'Service',
                     name: 'Deep Cleaning',
-                    description: 'Comprehensive one-time or seasonal deep clean'
+                    description: 'Thorough top-to-bottom cleaning including baseboards, inside appliances, light fixtures, window tracks, and hard-to-reach spots.',
+                    serviceType: 'Residential Cleaning'
                   }
                 },
                 {
@@ -216,7 +218,44 @@ export default defineNuxtConfig({
                   itemOffered: {
                     '@type': 'Service',
                     name: 'Move In/Out Cleaning',
-                    description: 'Thorough cleaning for moving transitions'
+                    description: 'Complete cleaning for vacant properties. Inside all cabinets, appliances, closets to meet inspection standards.',
+                    serviceType: 'Property Management'
+                  }
+                },
+                {
+                  '@type': 'Offer',
+                  itemOffered: {
+                    '@type': 'Service',
+                    name: 'Carpet Cleaning',
+                    description: 'Professional carpet cleaning using eco-friendly products. Removes dirt, stains, and odors from carpets.',
+                    serviceType: 'Specialty Cleaning'
+                  }
+                },
+                {
+                  '@type': 'Offer',
+                  itemOffered: {
+                    '@type': 'Service',
+                    name: 'Kitchen Deep Clean',
+                    description: 'Intensive kitchen cleaning including inside oven, refrigerator, cabinets, and all appliances. Degreasing of stovetop and backsplash.',
+                    serviceType: 'Specialty Cleaning'
+                  }
+                },
+                {
+                  '@type': 'Offer',
+                  itemOffered: {
+                    '@type': 'Service',
+                    name: 'Bathroom Deep Clean',
+                    description: 'Thorough bathroom sanitization including grout scrubbing, inside cabinets, shower door tracks. Removes soap scum and mildew.',
+                    serviceType: 'Specialty Cleaning'
+                  }
+                },
+                {
+                  '@type': 'Offer',
+                  itemOffered: {
+                    '@type': 'Service',
+                    name: 'Post-Renovation Cleaning',
+                    description: 'Specialized cleaning after construction or renovation. Removes dust, debris, paint splatters, and adhesive residue.',
+                    serviceType: 'Specialty Cleaning'
                   }
                 }
               ]
@@ -310,42 +349,58 @@ export default defineNuxtConfig({
             mainEntity: [
               {
                 '@type': 'Question',
-                name: 'What areas do you service in Richmond?',
+                name: 'What services do you offer?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'We provide cleaning services throughout Richmond, VA including Henrico, Short Pump, Glen Allen, and surrounding areas within a 20-mile radius of downtown Richmond.'
+                  text: 'We offer regular house cleaning, deep cleaning, move-in/out cleaning, carpet cleaning, kitchen deep clean, bathroom deep clean, and post-renovation cleaning. We can also create custom cleaning plans based on your specific needs.'
                 }
               },
               {
                 '@type': 'Question',
-                name: 'How often should I schedule cleaning service?',
+                name: 'How do you price your services?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Most of our clients prefer weekly or bi-weekly service to maintain a consistently clean home. We also offer monthly service and one-time deep cleaning options based on your needs and budget.'
+                  text: 'Pricing varies based on the size of your home, the type of service, and frequency. We offer transparent pricing through our booking system where you can select your home size and service type to see exact costs upfront.'
                 }
               },
               {
                 '@type': 'Question',
-                name: 'Are your cleaning products safe for pets and children?',
+                name: 'Do you use eco-friendly products?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Yes! We exclusively use eco-friendly, non-toxic cleaning products that are safe for children, pets, and the environment while still being highly effective at cleaning.'
+                  text: 'Yes! We prioritize eco-friendly, non-toxic cleaning products that are safe for your family, pets, and the environment. Our green cleaning solutions are effective against dirt and germs while being gentle on your home.'
                 }
               },
               {
                 '@type': 'Question',
-                name: 'Are you insured and bonded?',
+                name: 'Do I need to be home during the cleaning?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Absolutely. Daybreak Cleaning is fully insured and bonded for your peace of mind. All our cleaners are background-checked and professionally trained.'
+                  text: 'No, you don\'t need to be home. Many of our clients provide us with access to their homes and go about their day. Our team is trained to work independently with professionalism and respect for your space.'
                 }
               },
               {
                 '@type': 'Question',
-                name: 'What if I need to reschedule my cleaning?',
+                name: 'How far in advance should I book?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'We understand schedules change. Just give us 24 hours notice to reschedule your cleaning at no charge. We\'ll work with you to find a new time that fits your schedule.'
+                  text: 'We recommend booking at least a week in advance for regular cleaning services. For move-out cleanings or urgent requests, we often have same-week availability. Check our booking calendar for current openings.'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: 'What if I need to reschedule or cancel?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'We understand that plans change. Please notify us at least 24 hours in advance if you need to reschedule or cancel your appointment. This helps us accommodate other customers and maintain our schedule.'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: 'What areas do you serve?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'We proudly serve the Richmond, VA metropolitan area. If you\'re unsure whether we service your location, please reach out and we\'ll let you know.'
                 }
               }
             ]
