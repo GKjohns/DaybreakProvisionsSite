@@ -138,7 +138,6 @@ The site generates static files and can be deployed to any static hosting servic
 
 **Daybreak Provisions LLC**  
 Richmond, VA  
-Phone: (804) 555-0100  
 Email: kyle@daybreakprovisions.com
 
 ---

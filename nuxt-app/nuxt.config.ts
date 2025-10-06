@@ -99,7 +99,7 @@ export default defineNuxtConfig({
         { name: 'twitter:creator', content: '@daybreakrva' },
         { name: 'twitter:url', content: 'https://www.daybreakrva.com' },
         { name: 'twitter:title', content: 'Daybreak Cleaning - Richmond\'s Trusted Home Cleaning Service' },
-        { name: 'twitter:description', content: 'Professional home cleaning in Richmond VA. Eco-friendly, insured & trained cleaners. Weekly, bi-weekly & monthly plans. Call (804) 555-0100!' },
+        { name: 'twitter:description', content: 'Professional home cleaning in Richmond VA. Eco-friendly, insured & trained cleaners. Weekly, bi-weekly & monthly plans. Book online today!' },
         { name: 'twitter:image', content: 'https://www.daybreakrva.com/og-image.png' },
         { name: 'twitter:image:alt', content: 'Daybreak Cleaning Logo' },
         
@@ -153,7 +153,6 @@ export default defineNuxtConfig({
               latitude: 37.5407,
               longitude: -77.4360
             },
-            telephone: '+1-804-555-0100',
             email: 'hello@daybreakrva.com',
             openingHours: ['Mo-Fr 08:00-18:00', 'Sa 09:00-16:00'],
             openingHoursSpecification: [
@@ -268,7 +267,6 @@ export default defineNuxtConfig({
             contactPoint: [
               {
                 '@type': 'ContactPoint',
-                telephone: '+1-804-555-0100',
                 contactType: 'customer service',
                 areaServed: 'US',
                 availableLanguage: 'English',
@@ -281,7 +279,6 @@ export default defineNuxtConfig({
               },
               {
                 '@type': 'ContactPoint',
-                telephone: '+1-804-555-0100',
                 contactType: 'sales',
                 areaServed: 'US',
                 availableLanguage: 'English'
