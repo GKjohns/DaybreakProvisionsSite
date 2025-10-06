@@ -289,8 +289,8 @@
       </UPageSection>
 
       <!-- FAQ Section -->
-      <UContainer class="py-16 lg:py-24 border-t border-gray-200 dark:border-gray-800">
-        <div class="max-w-3xl mx-auto">
+      <UContainer class="py-8">
+        <div class="max-w-xl mx-auto">
           <div class="text-center mb-12">
             <h2 class="text-3xl lg:text-4xl font-bold mb-4">
               Frequently Asked Questions
@@ -303,24 +303,25 @@
           <UAccordion 
             type="multiple"
             :items="faqItems"
-            :ui="{
-              trigger: 'text-base',
-              body: 'text-base text-muted'
-            }"
           />
         </div>
       </UContainer>
 
       <!-- CTA Section -->
       <UPageCTA
-        class="relative overflow-hidden"
         title="A Spotless Home is Just a Click Away"
         description="Book online in under 2 minutes—no quotes, no hassle, just a cleaner home waiting for you."
         :links="[
           { label: 'Book Now', size: 'lg', to: 'https://app.squareup.com/appointments/buyer/widget/pp7iiefnbd7vqp/LNCHM239FSDW9', target: '_blank' },
           { label: 'Contact Us', size: 'lg', color: 'neutral', variant: 'outline', onClick: () => { isContactOpen = true } }
         ]"
-      />
+        variant="naked"
+        class="overflow-hidden max-w-5xl mx-auto relative"
+      >
+        <ClientOnly>
+          <CtaGradient />
+        </ClientOnly>
+      </UPageCTA>
     </UMain>
 
     <!-- Footer -->
