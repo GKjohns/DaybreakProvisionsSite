@@ -457,7 +457,7 @@ const faqItems = ref([
   {
     label: 'What areas do you serve?',
     icon: 'i-lucide-map-pin',
-    content: 'We proudly serve the Richmond, VA metropolitan area. If you\'re unsure whether we service your location, please reach out and we\'ll let you know.'
+    content: 'We proudly serve the Richmond, VA metropolitan area, as far south as Petersburg and as far north as Fredericksburg. If you\'re unsure whether we service your location, please reach out and we\'ll let you know.'
   }
 ])
 </script>
