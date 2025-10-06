@@ -9,6 +9,28 @@
       </template>
       
       <template #right>
+        <!-- Phone Number Button -->
+        <UButton
+          to="tel:+18049132670"
+          color="primary"
+          variant="ghost"
+          icon="i-heroicons-phone"
+          aria-label="Call (804) 913-2670"
+          class="hidden sm:flex"
+        >
+          <span class="hidden lg:inline">(804) 913-2670</span>
+        </UButton>
+        
+        <!-- Mobile Phone Icon Only -->
+        <UButton
+          to="tel:+18049132670"
+          color="primary"
+          variant="ghost"
+          icon="i-heroicons-phone"
+          aria-label="Call (804) 913-2670"
+          class="sm:hidden"
+        />
+        
         <!-- Contact Slideover -->
         <USlideover 
           v-model:open="isContactOpen" 
@@ -16,13 +38,6 @@
           description="We'd love to hear from you. Send us a message and we'll get back to you soon."
           :ui="{ footer: 'justify-end' }"
         >
-          <!-- <UButton 
-            variant="outline"
-            icon="i-lucide-message-circle"
-          >
-            Get Started
-          </UButton> -->
-          
           <template #body>
             <div class="space-y-6">
               <!-- Contact Form -->
@@ -42,11 +57,19 @@
                 <!-- Contact Information -->
                 <div class="pt-4 border-t border-gray-200 dark:border-gray-700">
                   <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">Or reach us directly:</p>
-                  <div class="flex items-center gap-2 text-sm">
-                    <UIcon name="i-heroicons-envelope" class="text-gray-400" />
-                    <a href="mailto:kyle@daybreakrva.com" class="text-primary hover:underline">
-                      kyle@daybreakrva.com
-                    </a>
+                  <div class="space-y-2">
+                    <div class="flex items-center gap-2 text-sm">
+                      <UIcon name="i-heroicons-phone" class="text-gray-400" />
+                      <a href="tel:+18049132670" class="text-primary hover:underline">
+                        (804) 913-2670
+                      </a>
+                    </div>
+                    <div class="flex items-center gap-2 text-sm">
+                      <UIcon name="i-heroicons-envelope" class="text-gray-400" />
+                      <a href="mailto:kyle@daybreakrva.com" class="text-primary hover:underline">
+                        kyle@daybreakrva.com
+                      </a>
+                    </div>
                   </div>
                 </div>
               </UForm>

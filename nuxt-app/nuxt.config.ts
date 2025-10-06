@@ -69,12 +69,13 @@ export default defineNuxtConfig({
         // Standard meta tags
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'format-detection', content: 'telephone=no' },
+        { name: 'format-detection', content: 'telephone=yes' },
         
         // SEO meta tags - enhanced for local search
         { name: 'description', content: 'Richmond VA\'s trusted cleaning service. Regular house cleaning, deep cleaning, move-in/out, carpet cleaning, kitchen & bathroom deep cleans, and post-renovation cleaning. Eco-friendly products. Book online today!' },
         { name: 'keywords', content: 'house cleaning Richmond VA, residential cleaning service, carpet cleaning Richmond, deep cleaning service, move out cleaning, post renovation cleaning, kitchen deep clean, bathroom cleaning, eco-friendly cleaning, professional house cleaning, maid service Richmond, home cleaners Richmond Virginia, property management cleaning' },
         { name: 'author', content: 'Daybreak Cleaning LLC' },
+        { name: 'telephone', content: '+1-804-913-2670' },
         { name: 'geo.region', content: 'US-VA' },
         { name: 'geo.placename', content: 'Richmond' },
         { name: 'geo.position', content: '37.5407;-77.4360' },
@@ -154,6 +155,7 @@ export default defineNuxtConfig({
               longitude: -77.4360
             },
             email: 'hello@daybreakrva.com',
+            telephone: '+1-804-913-2670',
             openingHours: ['Mo-Fr 08:00-18:00', 'Sa 09:00-16:00'],
             openingHoursSpecification: [
               {
@@ -267,6 +269,7 @@ export default defineNuxtConfig({
             contactPoint: [
               {
                 '@type': 'ContactPoint',
+                telephone: '+1-804-913-2670',
                 contactType: 'customer service',
                 areaServed: 'US',
                 availableLanguage: 'English',
@@ -279,6 +282,7 @@ export default defineNuxtConfig({
               },
               {
                 '@type': 'ContactPoint',
+                telephone: '+1-804-913-2670',
                 contactType: 'sales',
                 areaServed: 'US',
                 availableLanguage: 'English'
