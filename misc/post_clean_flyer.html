@@ -31,6 +31,14 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
         
+        /* Inner wrapper for print safety margins */
+        .card-inner {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            position: relative;
+        }
+        
         /* Left side - Image placeholder */
         .image-section {
             width: 45%;
@@ -39,7 +47,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            border-right: 1px solid #f0f0f0;
+            overflow: hidden;
         }
         
         .image-placeholder {
@@ -58,30 +66,33 @@
         /* Right side - Content */
         .content-section {
             width: 55%;
-            padding: 40px;
+            padding: 20px 25px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            position: relative;
+            background: white;
         }
         
         /* Logo */
         .logo-section {
             display: flex;
             align-items: center;
-            gap: 10px;
-            margin-bottom: 25px;
+            gap: 8px;
+            margin-bottom: 12px;
+            margin-top: 8px;
         }
         
         .logo-stripes {
             display: flex;
-            gap: 9px;
+            gap: 7px;
             align-items: center;
-            height: 32px;
+            height: 28px;
         }
         
         .stripe {
             width: 2px;
-            height: 28px;
+            height: 24px;
             border-radius: 1px;
         }
         
@@ -98,109 +109,135 @@
         }
         
         .logo-daybreak {
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 700;
             color: #000;
             letter-spacing: 0.5px;
         }
         
         .logo-cleaning {
-            font-size: 14px;
+            font-size: 12px;
             font-weight: 400;
             color: #666;
-            margin-top: 2px;
+            margin-top: 1px;
         }
         
         /* Main content */
         .main-content {
             flex: 1;
+            display: flex;
+            flex-direction: column;
         }
         
         .thank-you {
-            font-size: 32px;
+            font-size: 28px;
             font-weight: 700;
             color: #000;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
         }
         
         .message {
-            font-size: 15px;
-            line-height: 1.6;
-            color: #666;
-            margin-bottom: 25px;
+            font-size: 12px;
+            line-height: 1.5;
+            color: #555;
+            margin-bottom: 12px;
+        }
+        
+        /* Quality points */
+        .quality-points {
+            margin: 12px 0 14px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        
+        .point {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11px;
+            color: #555;
+        }
+        
+        .check {
+            color: #D97706;
+            font-weight: bold;
+            font-size: 12px;
         }
         
         /* Offer box */
         .offer-box {
-            background: #fafafa;
-            border: 1px solid #f0f0f0;
-            border-radius: 8px;
-            padding: 20px;
+            background: linear-gradient(135deg, #fef9f3 0%, #fef6ed 100%);
+            border: 1px solid #fed7aa;
+            border-radius: 6px;
+            padding: 10px 10px;
             text-align: center;
             display: block;
-            text-decoration: none;
             color: inherit;
-            transition: all 0.2s ease;
-        }
-        
-        .offer-box:hover {
-            background: #f5f5f5;
-            border-color: #EC4899;
-            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(251, 176, 36, 0.15);
+            margin-top: auto;
         }
         
         .offer-discount {
-            font-size: 28px;
+            font-size: 24px;
             font-weight: 800;
-            color: #EC4899;
-            margin-bottom: 4px;
+            color: #D97706;
+            margin-bottom: 3px;
+            letter-spacing: -0.5px;
         }
         
         .offer-text {
-            font-size: 13px;
-            color: #666;
+            font-size: 12px;
+            color: #333;
             margin-bottom: 3px;
+            font-weight: 500;
         }
         
         .offer-detail {
-            font-size: 11px;
-            color: #999;
+            font-size: 10px;
+            color: #888;
+            font-style: italic;
         }
         
         /* Footer */
         .footer {
-            padding-top: 20px;
-            border-top: 1px solid #f5f5f5;
+            padding-top: 10px;
+            margin-top: 12px;
+            border-top: 1px solid #f0f0f0;
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-end;
+        }
+        
+        .footer-left {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+        
+        .footer-right {
+            text-align: right;
         }
         
         .contact-info {
-            font-size: 12px;
-            color: #999;
+            font-size: 10px;
+            color: #666;
+            line-height: 1.2;
         }
         
-        .website {
-            color: #EC4899;
-            text-decoration: none;
-            transition: opacity 0.2s ease;
+        .contact-phone {
+            font-size: 11px;
+            font-weight: 600;
+            color: #333;
         }
         
-        .website:hover {
-            opacity: 0.7;
+        .contact-website {
+            color: #D97706;
+            font-weight: 500;
+            font-size: 11px;
         }
         
-        /* Top gradient accent - very subtle */
-        .gradient-accent {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(to right, #FBB024, #D97706, #EC4899, #9333EA);
-            opacity: 0.8;
-        }
         
         /* Print styles */
         @media print {
@@ -220,18 +257,18 @@
 </head>
 <body>
     <div class="card">
-        <!-- Left side - Image -->
-        <div class="image-section">
-            <img 
-                src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600&h=800&fit=crop&q=80" 
-                alt="Clean and modern living room with natural light"
-                style="width: 100%; height: 100%; object-fit: cover;"
-            />
-        </div>
-        
-        <!-- Right side - Content -->
-        <div class="content-section">
-            <div class="gradient-accent"></div>
+        <div class="card-inner">
+            <!-- Left side - Image -->
+            <div class="image-section">
+                <img 
+                    src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600&h=800&fit=crop&q=80" 
+                    alt="Clean and modern living room with natural light"
+                    style="width: 100%; height: 100%; object-fit: cover;"
+                />
+            </div>
+            
+            <!-- Right side - Content -->
+            <div class="content-section">
             
             <!-- Logo -->
             <div class="logo-section">
@@ -251,26 +288,43 @@
             <div class="main-content">
                 <h1 class="thank-you">Thank you!</h1>
                 <p class="message">
-                    We hope you're enjoying your sparkling clean home. 
-                    Ready to keep it this way without lifting a finger?
+                    Your space is spotless and ready for what's next. 
+                    We're here whenever you need us again.
                 </p>
                 
-                <a href="https://app.squareup.com/appointments/buyer/widget/pp7iiefnbd7vqp/LNCHM239FSDW9" target="_blank" class="offer-box">
-                    <div class="offer-discount">30% OFF</div>
-                    <div class="offer-text">Your first recurring cleaning</div>
-                    <div class="offer-detail">Weekly or bi-weekly service · Click to book</div>
-                </a>
+                <div class="quality-points">
+                    <div class="point">
+                        <span class="check">✓</span>
+                        <span>Eco-friendly, family & pet safe</span>
+                    </div>
+                    <div class="point">
+                        <span class="check">✓</span>
+                        <span>Meticulous attention to detail</span>
+                    </div>
+                    <div class="point">
+                        <span class="check">✓</span>
+                        <span>Book online in under 2 minutes</span>
+                    </div>
+                </div>
+                
+                <div class="offer-box">
+                    <div class="offer-discount">20% OFF</div>
+                    <div class="offer-text">Your next cleaning service</div>
+                    <div class="offer-detail">Or share with friends & family</div>
+                </div>
             </div>
             
             <!-- Footer -->
             <div class="footer">
-                <div class="contact-info">
-                    <a href="https://www.daybreakrva.com" class="website" target="_blank">daybreakrva.com</a>
+                <div class="footer-left">
+                    <div class="contact-phone">(804) 913-2670</div>
+                    <div class="contact-info">kyle@daybreakrva.com</div>
                 </div>
-                <div class="contact-info">
-                    <a href="mailto:kyle@daybreakrva.com" class="website">kyle@daybreakrva.com</a>
+                <div class="footer-right">
+                    <div class="contact-website">daybreakrva.com</div>
                 </div>
             </div>
+        </div>
         </div>
     </div>
 </body>
