@@ -368,6 +368,82 @@
         </div>
       </UContainer>
 
+      <!-- Veteran-Owned Business Section -->
+      <UContainer class="py-16 lg:py-24">
+        <div class="max-w-4xl mx-auto">
+          <UCard class="relative overflow-hidden border-0 bg-white dark:bg-gray-900 shadow-sm">
+            <!-- Subtle flag-inspired accent line at top -->
+            <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-white to-red-600 opacity-40"></div>
+            
+            <!-- Subtle star watermark -->
+            <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 opacity-5">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="w-full h-full text-gray-900 dark:text-gray-100">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            </div>
+            
+            <div class="relative z-10 space-y-6">
+              <div class="flex flex-col sm:flex-row items-start gap-6">
+                <div class="flex-shrink-0">
+                  <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100">
+                    <UIcon name="i-heroicons-shield-check" class="w-7 h-7" />
+                  </div>
+                </div>
+                
+                <div class="flex-1 space-y-4">
+                  <div>
+                    <h2 class="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-2">
+                      Veteran-Owned & Operated
+                    </h2>
+                    <p class="text-base text-gray-600 dark:text-gray-400">
+                      Your trust means everything to us. As a veteran-owned business, we bring military precision, integrity, and a deep commitment to service to every home we clean.
+                    </p>
+                  </div>
+                  
+                  <div class="grid sm:grid-cols-2 gap-3">
+                    <div class="flex items-start gap-2.5">
+                      <div class="w-1 h-4 bg-blue-600 rounded-full mt-0.5 flex-shrink-0"></div>
+                      <div>
+                        <p class="font-medium text-gray-900 dark:text-gray-100 text-sm">Attention to Detail</p>
+                        <p class="text-xs text-gray-500 dark:text-gray-500">Military training means nothing gets overlooked</p>
+                      </div>
+                    </div>
+                    
+                    <div class="flex items-start gap-2.5">
+                      <div class="w-1 h-4 bg-red-600 rounded-full mt-0.5 flex-shrink-0"></div>
+                      <div>
+                        <p class="font-medium text-gray-900 dark:text-gray-100 text-sm">Punctual & Reliable</p>
+                        <p class="text-xs text-gray-500 dark:text-gray-500">We show up on time, every time</p>
+                      </div>
+                    </div>
+                    
+                    <div class="flex items-start gap-2.5">
+                      <div class="w-1 h-4 bg-blue-600 rounded-full mt-0.5 flex-shrink-0"></div>
+                      <div>
+                        <p class="font-medium text-gray-900 dark:text-gray-100 text-sm">Honor & Integrity</p>
+                        <p class="text-xs text-gray-500 dark:text-gray-500">Trustworthy service you can count on</p>
+                      </div>
+                    </div>
+                    
+                    <div class="flex items-start gap-2.5">
+                      <div class="w-1 h-4 bg-red-600 rounded-full mt-0.5 flex-shrink-0"></div>
+                      <div>
+                        <p class="font-medium text-gray-900 dark:text-gray-100 text-sm">Community Focused</p>
+                        <p class="text-xs text-gray-500 dark:text-gray-500">Proudly serving our Richmond neighbors</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <p class="text-xs text-gray-500 dark:text-gray-500 italic pt-2 border-t border-gray-100 dark:border-gray-800">
+                    "Service to others is the rent you pay for your room here on earth."<br/>We continue that service by bringing excellence to your home.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </UCard>
+        </div>
+      </UContainer>
+
       <!-- CTA Section -->
       <UPageCTA
         title="A Spotless Home is Just a Click Away"
@@ -387,18 +463,79 @@
 
     <!-- Footer -->
     <UFooter>
+      <template #top>
+        <UContainer>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 py-8">
+            <!-- Company Info -->
+            <div class="space-y-4">
+              <div class="flex items-center gap-3">
+                <ColorStripeLogo size="sm" />
+                <div>
+                  <div class="text-lg font-bold">Daybreak Cleaning</div>
+                  <div class="text-sm text-muted">Professional Home Cleaning</div>
+                </div>
+              </div>
+              <div class="space-y-1 text-sm text-muted">
+                <p>Black-Owned & Veteran-Owned Business</p>
+                <p>Proudly serving Richmond, VA and surrounding areas</p>
+              </div>
+            </div>
+            
+            <!-- Quick Links -->
+            <div class="space-y-4">
+              <h3 class="text-sm font-semibold uppercase tracking-wider">Services</h3>
+              <ul class="space-y-2 text-sm text-muted">
+                <li>• Residential Cleaning</li>
+                <li>• Move-Out Cleaning</li>
+                <li>• Carpet Cleaning</li>
+                <li>• Deep Cleaning</li>
+              </ul>
+            </div>
+            
+            <!-- Contact Info -->
+            <div class="space-y-4">
+              <h3 class="text-sm font-semibold uppercase tracking-wider">Get In Touch</h3>
+              <div class="space-y-2 text-sm">
+                <div class="flex items-center gap-2">
+                  <UIcon name="i-heroicons-phone" class="text-muted flex-shrink-0" />
+                  <a href="tel:+18049132670" class="text-muted hover:text-primary transition-colors">
+                    (804) 913-2670
+                  </a>
+                </div>
+                <div class="flex items-center gap-2">
+                  <UIcon name="i-heroicons-envelope" class="text-muted flex-shrink-0" />
+                  <a href="mailto:kyle@daybreakrva.com" class="text-muted hover:text-primary transition-colors">
+                    kyle@daybreakrva.com
+                  </a>
+                </div>
+                <div class="flex items-center gap-2">
+                  <UIcon name="i-heroicons-map-pin" class="text-muted flex-shrink-0" />
+                  <span class="text-muted">Richmond, Virginia</span>
+                </div>
+              </div>
+              <div class="pt-2">
+                <UButton
+                  label="Book Online"
+                  size="sm"
+                  color="primary"
+                  to="https://app.squareup.com/appointments/buyer/widget/pp7iiefnbd7vqp/LNCHM239FSDW9"
+                  target="_blank"
+                />
+              </div>
+            </div>
+          </div>
+        </UContainer>
+        <USeparator />
+      </template>
+      
       <template #left>
-        <div class="text-xs font-bold text-muted tracking-wider">
-          © {{ currentYear }} DAYBREAK CLEANING LLC
+        <div class="text-xs text-muted">
+          © {{ currentYear }} Daybreak Cleaning LLC. All rights reserved.
         </div>
       </template>
 
-      <template #center>
-        <ColorStripeLogo size="sm" />
-      </template>
-
       <template #right>
-        <div class="text-xs font-medium text-muted">
+        <div class="text-xs text-muted">
           Made with ☀️ in Richmond, VA
         </div>
       </template>
