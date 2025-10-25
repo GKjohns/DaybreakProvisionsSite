@@ -56,7 +56,7 @@
         <div class="grid lg:grid-cols-3 gap-8">
           <!-- Table of Contents Sidebar -->
           <div class="lg:col-span-1">
-            <div class="sticky top-4">
+            <div class="sticky top-20">
               <UCard class="bg-gradient-to-br from-amber-50/50 to-orange-50/50 dark:from-amber-900/5 dark:to-orange-900/5">
                 <h3 class="font-semibold mb-4 flex items-center gap-2">
                   <UIcon name="i-lucide-list" class="w-4 h-4 text-amber-600 dark:text-amber-400" />
@@ -166,8 +166,10 @@
                       variant="soft"
                       icon="i-lucide-phone"
                       to="tel:+18049132670"
+                      class="gap-1.5"
                     >
                       (804) 913-2670
+                      <UBadge color="primary" variant="subtle" size="xs">Text OK</UBadge>
                     </UButton>
                     <UButton
                       color="primary"
@@ -184,7 +186,7 @@
                 <div>
                   <h3 class="font-semibold mb-2">Getting Help</h3>
                   <p class="text-gray-700 dark:text-gray-300">
-                    For help or support with SMS messages, reply <strong>HELP</strong> to any message, or contact 
+                    For help or support with SMS messages, reply <strong>HELP</strong> to any message, or text/call 
                     us at <a href="tel:+18049132670" class="text-primary hover:underline">(804) 913-2670</a>.
                   </p>
                 </div>
@@ -259,9 +261,12 @@
                     </div>
                     <div>
                       <p class="text-sm text-gray-600 dark:text-gray-400">Phone</p>
-                      <a href="tel:+18049132670" class="font-medium text-primary hover:underline">
-                        (804) 913-2670
-                      </a>
+                      <div class="flex items-center gap-2">
+                        <a href="tel:+18049132670" class="font-medium text-primary hover:underline">
+                          (804) 913-2670
+                        </a>
+                        <UBadge color="primary" variant="subtle" size="xs">Text OK</UBadge>
+                      </div>
                     </div>
                   </div>
                   

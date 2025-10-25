@@ -9,27 +9,36 @@
       </template>
       
       <template #right>
-        <!-- Phone Number Button -->
-        <UButton
-          to="tel:+18049132670"
-          color="primary"
-          variant="ghost"
-          icon="i-heroicons-phone"
-          aria-label="Call (804) 913-2670"
-          class="hidden sm:flex"
-        >
-          <span class="hidden lg:inline">(804) 913-2670</span>
-        </UButton>
+        <!-- Phone Number Button with Text Indicator - Desktop -->
+        <UTooltip text="Call or Text Us!" :popper="{ placement: 'bottom' }">
+          <UButton
+            to="tel:+18049132670"
+            color="primary"
+            variant="ghost"
+            icon="i-heroicons-phone"
+            aria-label="Call or Text (804) 913-2670"
+            class="hidden sm:flex"
+          >
+            <span class="hidden lg:inline flex items-center gap-1.5">
+              (804) 913-2670
+              <span class="text-xs font-medium px-1.5 py-0.5 rounded bg-primary/10 text-primary">
+                Text OK
+              </span>
+            </span>
+          </UButton>
+        </UTooltip>
         
         <!-- Mobile Phone Icon Only -->
-        <UButton
-          to="tel:+18049132670"
-          color="primary"
-          variant="ghost"
-          icon="i-heroicons-phone"
-          aria-label="Call (804) 913-2670"
-          class="sm:hidden"
-        />
+        <UTooltip text="Call or Text!" :popper="{ placement: 'bottom' }">
+          <UButton
+            to="tel:+18049132670"
+            color="primary"
+            variant="ghost"
+            icon="i-heroicons-phone"
+            aria-label="Call or Text (804) 913-2670"
+            class="sm:hidden"
+          />
+        </UTooltip>
         
         <!-- Contact Slideover -->
         <USlideover 
@@ -60,8 +69,9 @@
                   <div class="space-y-2">
                     <div class="flex items-center gap-2 text-sm">
                       <UIcon name="i-heroicons-phone" class="text-gray-400" />
-                      <a href="tel:+18049132670" class="text-primary hover:underline">
+                      <a href="tel:+18049132670" class="text-primary hover:underline flex items-center gap-1.5">
                         (804) 913-2670
+                        <UBadge color="primary" variant="subtle" size="xs">Text OK</UBadge>
                       </a>
                     </div>
                     <div class="flex items-center gap-2 text-sm">
@@ -648,8 +658,9 @@
               <div class="space-y-2 text-sm">
                 <div class="flex items-center gap-2">
                   <UIcon name="i-heroicons-phone" class="text-muted flex-shrink-0" />
-                  <a href="tel:+18049132670" class="text-muted hover:text-primary transition-colors">
+                  <a href="tel:+18049132670" class="text-muted hover:text-primary transition-colors flex items-center gap-1.5">
                     (804) 913-2670
+                    <UBadge color="primary" variant="subtle" size="xs">Text OK</UBadge>
                   </a>
                 </div>
                 <div class="flex items-center gap-2">
@@ -733,7 +744,7 @@
             
             <div>
               <p class="text-sm font-medium mb-1">How to Opt Out</p>
-              <p class="text-sm text-gray-600 dark:text-gray-400">Reply <strong>STOP</strong> to any message, or call us at (804) 913-2670.</p>
+              <p class="text-sm text-gray-600 dark:text-gray-400">Reply <strong>STOP</strong> to any message, or text/call us at (804) 913-2670.</p>
             </div>
             
             <div>
@@ -754,8 +765,9 @@
           <div class="pt-4 border-t border-gray-200 dark:border-gray-700">
             <p class="text-sm font-medium mb-2">Questions?</p>
             <div class="space-y-1 text-sm">
-              <p>
+              <p class="flex items-center gap-1.5">
                 <a href="tel:+18049132670" class="text-primary hover:underline">(804) 913-2670</a>
+                <UBadge color="primary" variant="subtle" size="xs">Text OK</UBadge>
               </p>
               <p>
                 <a href="mailto:kyle@daybreakrva.com" class="text-primary hover:underline">kyle@daybreakrva.com</a>
