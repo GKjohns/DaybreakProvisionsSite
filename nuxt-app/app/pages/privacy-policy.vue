@@ -169,7 +169,7 @@
                       class="gap-1.5"
                     >
                       (804) 913-2670
-                      <UBadge color="primary" variant="subtle" size="xs">Text OK</UBadge>
+                      <UBadge color="warning" variant="subtle" size="xs">Text OK</UBadge>
                     </UButton>
                     <UButton
                       color="primary"
@@ -265,7 +265,7 @@
                         <a href="tel:+18049132670" class="font-medium text-primary hover:underline">
                           (804) 913-2670
                         </a>
-                        <UBadge color="primary" variant="subtle" size="xs">Text OK</UBadge>
+                        <UBadge color="warning" variant="subtle" size="xs">Text OK</UBadge>
                       </div>
                     </div>
                   </div>

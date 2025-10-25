@@ -21,7 +21,7 @@
           >
             <span class="hidden lg:inline flex items-center gap-1.5">
               (804) 913-2670
-              <span class="text-xs font-medium px-1.5 py-0.5 rounded bg-primary/10 text-primary">
+              <span class="text-xs font-medium px-1.5 py-0.5 rounded bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400">
                 Text OK
               </span>
             </span>
@@ -71,7 +71,7 @@
                       <UIcon name="i-heroicons-phone" class="text-gray-400" />
                       <a href="tel:+18049132670" class="text-primary hover:underline flex items-center gap-1.5">
                         (804) 913-2670
-                        <UBadge color="primary" variant="subtle" size="xs">Text OK</UBadge>
+                        <UBadge color="warning" variant="subtle" size="xs">Text OK</UBadge>
                       </a>
                     </div>
                     <div class="flex items-center gap-2 text-sm">
@@ -660,7 +660,7 @@
                   <UIcon name="i-heroicons-phone" class="text-muted flex-shrink-0" />
                   <a href="tel:+18049132670" class="text-muted hover:text-primary transition-colors flex items-center gap-1.5">
                     (804) 913-2670
-                    <UBadge color="primary" variant="subtle" size="xs">Text OK</UBadge>
+                    <UBadge color="warning" variant="subtle" size="xs">Text OK</UBadge>
                   </a>
                 </div>
                 <div class="flex items-center gap-2">
@@ -767,7 +767,7 @@
             <div class="space-y-1 text-sm">
               <p class="flex items-center gap-1.5">
                 <a href="tel:+18049132670" class="text-primary hover:underline">(804) 913-2670</a>
-                <UBadge color="primary" variant="subtle" size="xs">Text OK</UBadge>
+                <UBadge color="warning" variant="subtle" size="xs">Text OK</UBadge>
               </p>
               <p>
                 <a href="mailto:kyle@daybreakrva.com" class="text-primary hover:underline">kyle@daybreakrva.com</a>
