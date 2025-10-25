@@ -685,11 +685,256 @@
       </template>
 
       <template #right>
-        <div class="text-xs text-muted">
-          Made with ☀️ in Richmond, VA
+        <div class="flex items-center gap-3 text-xs text-muted">
+          <button 
+            @click="isPrivacyPolicyOpen = true" 
+            class="hover:text-primary transition-colors underline"
+          >
+            Privacy Policy
+          </button>
+          <span>•</span>
+          <span>Made with ☀️ in Richmond, VA</span>
         </div>
       </template>
     </UFooter>
+
+    <!-- Privacy Policy Slideover -->
+    <USlideover 
+      v-model:open="isPrivacyPolicyOpen" 
+      title="Privacy Policy" 
+      description="SMS Marketing Consent and Data Privacy"
+      <!-- use default body spacing -->
+    >
+      <template #body>
+        <!-- small themed banner -->
+        <div class="flex items-center gap-2 py-3 px-4 bg-gradient-to-r from-amber-50 via-orange-50 to-pink-50 dark:from-amber-900/10 dark:via-orange-900/10 dark:to-pink-900/10">
+          <UIcon name="i-lucide-shield-check" class="w-5 h-5 text-amber-600 dark:text-amber-400" />
+          <h2 class="text-sm font-semibold">SMS Marketing & Privacy</h2>
+        </div>
+
+        <!-- Content -->
+        <div class="px-4 sm:px-6 py-6">
+          <!-- Last Updated Badge -->
+          <div class="mb-6">
+            <UBadge color="neutral" variant="subtle" class="gap-1.5">
+              <UIcon name="i-lucide-calendar" class="w-3.5 h-3.5" />
+              Last updated: October 25, 2025
+            </UBadge>
+          </div>
+
+          <!-- Back to Home Button -->
+          <div class="mb-6">
+            <UButton
+              color="neutral"
+              variant="subtle"
+              icon="i-lucide-arrow-left"
+              size="sm"
+              @click="isPrivacyPolicyOpen = false"
+            >
+              Back to Home
+            </UButton>
+          </div>
+
+          <!-- SMS Marketing Consent Section -->
+          <div class="space-y-6">
+            <div class="border-l-4 border-amber-400 dark:border-amber-600 pl-4 py-2 bg-amber-50/50 dark:bg-amber-900/10 rounded-r">
+              <h3 class="text-lg font-semibold flex items-center gap-2 mb-1">
+                <UIcon name="i-lucide-message-square" class="w-5 h-5 text-amber-600 dark:text-amber-400" />
+                SMS Marketing Consent
+              </h3>
+            </div>
+            
+            <div class="space-y-5">
+              <!-- How We Use SMS -->
+              <div class="rounded-lg border border-gray-200 dark:border-gray-700 p-4 bg-gray-50/50 dark:bg-gray-800/50">
+                <h4 class="text-sm font-semibold flex items-center gap-2 mb-3">
+                  <UIcon name="i-lucide-info" class="w-4 h-4 text-primary" />
+                  How We Use SMS
+                </h4>
+                <p class="text-sm text-gray-700 dark:text-gray-300 mb-3">
+                  By opting in to receive text messages from Daybreak Cleaning, you agree to receive SMS messages 
+                  for the following purposes:
+                </p>
+                <ul class="text-sm text-gray-700 dark:text-gray-300 space-y-2">
+                  <li class="flex items-start gap-2">
+                    <UIcon name="i-lucide-check" class="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                    <span>Booking confirmations and reminders</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <UIcon name="i-lucide-check" class="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                    <span>Service updates and scheduling changes</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <UIcon name="i-lucide-check" class="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                    <span>Special promotions and offers (optional)</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Consent to Receive -->
+              <div>
+                <h4 class="text-sm font-semibold mb-2">Consent to Receive Messages</h4>
+                <p class="text-sm text-gray-700 dark:text-gray-300">
+                  When you provide your phone number and opt in to receive text messages, you are consenting 
+                  to receive automated SMS messages from Daybreak Cleaning at the phone number provided. 
+                  This consent is not required to purchase goods or services.
+                </p>
+              </div>
+
+              <!-- Message Frequency -->
+              <div>
+                <h4 class="text-sm font-semibold mb-2">Message Frequency</h4>
+                <p class="text-sm text-gray-700 dark:text-gray-300">
+                  Message frequency varies based on your service schedule and any special offers we may send. 
+                  You may receive up to 4 messages per month for booking-related communications, and occasional 
+                  promotional messages if you opt in for marketing communications.
+                </p>
+              </div>
+
+              <!-- Message and Data Rates -->
+              <UAlert
+                color="warning"
+                variant="subtle"
+                icon="i-lucide-alert-circle"
+                title="Message and Data Rates"
+                description="Message and data rates may apply based on your mobile carrier's plan. Please contact your carrier for details about your specific plan."
+              />
+
+              <!-- How to Opt Out -->
+              <div class="rounded-lg border-2 border-primary/20 p-4 bg-primary/5">
+                <h4 class="text-sm font-semibold flex items-center gap-2 mb-2">
+                  <UIcon name="i-lucide-log-out" class="w-4 h-4" />
+                  How to Opt Out
+                </h4>
+                <p class="text-sm text-gray-700 dark:text-gray-300 mb-3">
+                  You can opt out of receiving SMS messages at any time by replying <strong>STOP</strong> to 
+                  any text message you receive from us. You may also contact us directly:
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <UButton
+                    color="primary"
+                    variant="soft"
+                    size="xs"
+                    icon="i-lucide-phone"
+                    to="tel:+18049132670"
+                  >
+                    (804) 913-2670
+                  </UButton>
+                  <UButton
+                    color="primary"
+                    variant="soft"
+                    size="xs"
+                    icon="i-lucide-mail"
+                    to="mailto:kyle@daybreakrva.com"
+                  >
+                    kyle@daybreakrva.com
+                  </UButton>
+                </div>
+              </div>
+
+              <!-- Getting Help -->
+              <div>
+                <h4 class="text-sm font-semibold mb-2">Getting Help</h4>
+                <p class="text-sm text-gray-700 dark:text-gray-300">
+                  For help or support with SMS messages, reply <strong>HELP</strong> to any message, or contact 
+                  us at <a href="tel:+18049132670" class="text-primary hover:underline">(804) 913-2670</a>.
+                </p>
+              </div>
+
+              <!-- Data Privacy -->
+              <div class="border-l-4 border-pink-400 dark:border-pink-600 pl-4 py-2">
+                <h4 class="text-sm font-semibold flex items-center gap-2 mb-2">
+                  <UIcon name="i-lucide-shield" class="w-4 h-4 text-pink-600 dark:text-pink-400" />
+                  Data Privacy and Sharing
+                </h4>
+                <p class="text-sm text-gray-700 dark:text-gray-300 mb-3">
+                  We respect your privacy. Your phone number and any information you provide will not be shared 
+                  with third parties except as necessary to deliver SMS services through our messaging service 
+                  provider. We will never sell your personal information.
+                </p>
+                <p class="text-sm font-medium text-gray-900 dark:text-gray-100 mb-2">We collect and store:</p>
+                <ul class="text-sm text-gray-700 dark:text-gray-300 space-y-1">
+                  <li class="flex items-start gap-2">
+                    <span class="text-pink-500 dark:text-pink-400">•</span>
+                    <span>Your phone number</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-pink-500 dark:text-pink-400">•</span>
+                    <span>Your name and booking details</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-pink-500 dark:text-pink-400">•</span>
+                    <span>SMS message history for service purposes</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-pink-500 dark:text-pink-400">•</span>
+                    <span>Opt-in and opt-out preferences</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Changes to Policy -->
+              <div>
+                <h4 class="text-sm font-semibold mb-2">Changes to This Policy</h4>
+                <p class="text-sm text-gray-700 dark:text-gray-300">
+                  We may update this privacy policy from time to time. Any changes will be posted with an 
+                  updated "Last Updated" date. Your continued participation in our SMS program after changes 
+                  are posted constitutes your acceptance of the updated policy.
+                </p>
+              </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
+              <div class="border-l-4 border-orange-400 dark:border-orange-600 pl-4 py-2 mb-4">
+                <h3 class="text-lg font-semibold flex items-center gap-2">
+                  <UIcon name="i-lucide-contact" class="w-5 h-5 text-orange-600 dark:text-orange-400" />
+                  Contact Information
+                </h3>
+              </div>
+              <p class="text-sm text-gray-700 dark:text-gray-300 mb-4">
+                If you have questions about this privacy policy or our SMS practices, please contact us:
+              </p>
+              <UCard class="bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-900/10 dark:to-orange-900/10 border-amber-200 dark:border-amber-800">
+                <div class="space-y-3">
+                  <div class="flex items-center gap-3">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center">
+                      <UIcon name="i-lucide-phone" class="w-4 h-4 text-amber-700 dark:text-amber-400" />
+                    </div>
+                    <div>
+                      <p class="text-xs text-gray-600 dark:text-gray-400">Phone</p>
+                      <a href="tel:+18049132670" class="text-sm font-medium text-primary hover:underline">
+                        (804) 913-2670
+                      </a>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center">
+                      <UIcon name="i-lucide-mail" class="w-4 h-4 text-orange-700 dark:text-orange-400" />
+                    </div>
+                    <div>
+                      <p class="text-xs text-gray-600 dark:text-gray-400">Email</p>
+                      <a href="mailto:kyle@daybreakrva.com" class="text-sm font-medium text-primary hover:underline">
+                        kyle@daybreakrva.com
+                      </a>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-pink-100 dark:bg-pink-900/30 flex items-center justify-center">
+                      <UIcon name="i-lucide-building" class="w-4 h-4 text-pink-700 dark:text-pink-400" />
+                    </div>
+                    <div>
+                      <p class="text-xs text-gray-600 dark:text-gray-400">Business Name</p>
+                      <p class="text-sm font-medium">Daybreak Cleaning LLC</p>
+                    </div>
+                  </div>
+                </div>
+              </UCard>
+            </div>
+          </div>
+        </div>
+      </template>
+    </USlideover>
 </template>
 
 <script setup lang="ts">
@@ -720,6 +965,9 @@ const formState = reactive({
   email: '',
   notes: ''
 })
+
+// Privacy policy slideover state
+const isPrivacyPolicyOpen = ref(false)
 
 const toast = useToast()
 
