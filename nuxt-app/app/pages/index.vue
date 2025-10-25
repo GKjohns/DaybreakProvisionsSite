@@ -91,21 +91,52 @@
     <!-- Main Content -->
     <UMain>
       <!-- Hero Section -->
-      <UPageHero
-        title="Professional home cleaning you can trust."
-        description="We bring sparkle to your home with eco-friendly products, trained professionals, and attention to every detail."
-        orientation="horizontal"
-        :links="[
-          { label: 'Book Now', size: 'xl', to: 'https://app.squareup.com/appointments/buyer/widget/pp7iiefnbd7vqp/LNCHM239FSDW9', target: '_blank' },
-          { label: 'Reach Out', size: 'xl', color: 'neutral', variant: 'outline', onClick: () => { isContactOpen = true } }
-        ]"
-      >
-        <img 
-          src="/hero-image.png"
-          alt="Person organizing items on wooden shelves in a bright, clean modern kitchen with white farmhouse sink, natural wood cabinetry, and green plants"
-          class="rounded-lg shadow-2xl ring ring-default"
-        />
-      </UPageHero>
+      <div class="relative overflow-hidden">
+        <!-- Subtle ambient background -->
+        <div class="absolute inset-0 -z-10">
+          <!-- Soft base gradient using brand colors - amber to orange with hint of pink -->
+          <div class="absolute inset-0 bg-gradient-to-br from-amber-50/40 via-orange-50/30 to-pink-50/20 dark:from-gray-900 dark:via-gray-900 dark:to-gray-900" />
+          
+          <!-- Subtle animated orbs using only brand colors -->
+          <div class="absolute top-0 -left-4 w-96 h-96 bg-amber-300/30 rounded-full mix-blend-soft-light filter blur-3xl opacity-40 animate-blob dark:bg-amber-600/20 dark:opacity-15" />
+          <div class="absolute top-0 -right-4 w-96 h-96 bg-pink-300/25 rounded-full mix-blend-soft-light filter blur-3xl opacity-30 animate-blob animation-delay-2000 dark:bg-pink-600/15 dark:opacity-10" />
+          <div class="absolute -bottom-8 left-20 w-80 h-80 bg-orange-200/40 rounded-full mix-blend-soft-light filter blur-3xl opacity-35 animate-blob animation-delay-4000 dark:bg-orange-700/15 dark:opacity-12" />
+          <div class="absolute bottom-0 right-20 w-72 h-72 bg-purple-200/20 rounded-full mix-blend-soft-light filter blur-3xl opacity-25 animate-blob animation-delay-6000 dark:bg-purple-700/10 dark:opacity-8" />
+          
+          <!-- Soft gradient overlay for depth -->
+          <div class="absolute inset-0 bg-gradient-to-t from-white/85 via-white/30 to-transparent dark:from-gray-900/90 dark:via-gray-900/20" />
+          
+          <!-- Warm radial glow in the center -->
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-gradient-radial from-amber-100/15 via-orange-100/10 to-transparent rounded-full" />
+        </div>
+        
+        <!-- Hero content -->
+        <UContainer class="relative">
+          <div class="mx-auto max-w-4xl text-center py-24 lg:py-32">
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-gray-900 dark:text-white">
+              Professional home cleaning you can trust.
+            </h1>
+            <p class="mt-6 text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              We bring sparkle to your home with eco-friendly products, trained professionals, and attention to every detail.
+            </p>
+            <div class="mt-10 flex items-center justify-center gap-4">
+              <UButton 
+                label="Book Now"
+                size="xl"
+                to="https://app.squareup.com/appointments/buyer/widget/pp7iiefnbd7vqp/LNCHM239FSDW9"
+                target="_blank"
+              />
+              <UButton 
+                label="Reach Out"
+                size="xl"
+                color="neutral"
+                variant="outline"
+                @click="isContactOpen = true"
+              />
+            </div>
+          </div>
+        </UContainer>
+      </div>
 
       <!-- Testimonial Section -->
       <UContainer class="py-12 lg:py-16">
@@ -222,12 +253,31 @@
           { label: 'Get a Quote', size: 'lg', onClick: () => { isContactOpen = true } }
         ]"
       >
-        <img 
-          src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&h=600&fit=crop&q=80"
-          alt="Clean and modern living room with natural light"
-          class="w-full rounded-lg shadow-2xl ring ring-default"
-          loading="lazy"
-        />
+        <!-- Abstract sunrise visualization -->
+        <div class="relative w-full h-[400px] rounded-lg overflow-hidden shadow-xl">
+          <!-- Gradient background representing dawn -->
+          <div class="absolute inset-0 bg-gradient-to-b from-amber-50 via-orange-50 to-rose-50 dark:from-amber-900/10 dark:via-orange-900/10 dark:to-rose-900/10" />
+          
+          <!-- Abstract sun rays -->
+          <div class="absolute inset-0">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96">
+              <div class="absolute inset-0 bg-gradient-to-r from-transparent via-amber-100/20 to-transparent rotate-12 dark:via-amber-800/20" />
+              <div class="absolute inset-0 bg-gradient-to-r from-transparent via-orange-100/20 to-transparent -rotate-12 dark:via-orange-800/20" />
+              <div class="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-100/20 to-transparent rotate-45 dark:via-yellow-800/20" />
+            </div>
+          </div>
+          
+          <!-- Central abstract element -->
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            <div class="w-32 h-32 rounded-full bg-gradient-to-br from-amber-200/40 to-orange-200/40 dark:from-amber-700/40 dark:to-orange-700/40 blur-xl" />
+            <div class="absolute inset-4 rounded-full bg-gradient-to-br from-amber-100/60 to-orange-100/60 dark:from-amber-800/60 dark:to-orange-800/60 blur-md" />
+          </div>
+          
+          <!-- Subtle sparkle accents -->
+          <div class="absolute top-1/4 left-1/4 w-2 h-2 bg-white/60 rounded-full animate-pulse" />
+          <div class="absolute top-1/3 right-1/3 w-1.5 h-1.5 bg-white/50 rounded-full animate-pulse delay-75" />
+          <div class="absolute bottom-1/3 left-1/3 w-1 h-1 bg-white/40 rounded-full animate-pulse delay-150" />
+        </div>
       </UPageSection>
 
       <!-- Move-Out & Property Management Section -->
@@ -262,12 +312,51 @@
           { label: 'Get a Quote', size: 'lg', onClick: () => { isContactOpen = true } }
         ]"
       >
-        <img 
-          src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&h=600&fit=crop&q=80"
-          alt="Empty clean room ready for new tenants"
-          class="w-full rounded-lg shadow-2xl ring ring-default"
-          loading="lazy"
-        />
+        <!-- Abstract geometric transition visualization -->
+        <div class="relative w-full h-[400px] rounded-lg overflow-hidden shadow-xl">
+          <!-- Base gradient with warmer tones -->
+          <div class="absolute inset-0 bg-gradient-to-br from-rose-50 via-pink-50 to-purple-50 dark:from-rose-900/20 dark:via-pink-900/20 dark:to-purple-900/20" />
+          
+          <!-- Flowing transition lines -->
+          <div class="absolute inset-0">
+            <svg class="w-full h-full" viewBox="0 0 800 400" preserveAspectRatio="none">
+              <!-- Abstract flowing path representing transition -->
+              <path d="M0,200 Q200,100 400,200 T800,200" 
+                    stroke="url(#gradient1)" 
+                    stroke-width="2" 
+                    fill="none" 
+                    opacity="0.3"/>
+              <path d="M0,250 Q200,150 400,250 T800,250" 
+                    stroke="url(#gradient1)" 
+                    stroke-width="1.5" 
+                    fill="none" 
+                    opacity="0.2"/>
+              <path d="M0,150 Q200,250 400,150 T800,150" 
+                    stroke="url(#gradient1)" 
+                    stroke-width="1.5" 
+                    fill="none" 
+                    opacity="0.2"/>
+              
+              <!-- Gradient definitions -->
+              <defs>
+                <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" style="stop-color:rgb(236,72,153);stop-opacity:0.4" />
+                  <stop offset="50%" style="stop-color:rgb(147,51,234);stop-opacity:0.6" />
+                  <stop offset="100%" style="stop-color:rgb(236,72,153);stop-opacity:0.4" />
+                </linearGradient>
+              </defs>
+              
+              <!-- Circles representing key points -->
+              <circle cx="200" cy="200" r="30" fill="url(#gradient1)" opacity="0.2"/>
+              <circle cx="400" cy="200" r="40" fill="url(#gradient1)" opacity="0.25"/>
+              <circle cx="600" cy="200" r="30" fill="url(#gradient1)" opacity="0.2"/>
+            </svg>
+          </div>
+          
+          <!-- Subtle floating elements with warm colors -->
+          <div class="absolute top-1/3 left-1/4 w-16 h-16 rounded-full bg-gradient-to-br from-pink-200/20 to-purple-200/20 dark:from-pink-700/20 dark:to-purple-700/20 blur-xl animate-float" />
+          <div class="absolute bottom-1/3 right-1/4 w-20 h-20 rounded-full bg-gradient-to-br from-purple-200/20 to-rose-200/20 dark:from-purple-700/20 dark:to-rose-700/20 blur-xl animate-float-delayed" />
+        </div>
       </UPageSection>
 
       <!-- Carpet Cleaning Section -->
@@ -301,12 +390,32 @@
           { label: 'Get a Quote', size: 'lg', onClick: () => { isContactOpen = true } }
         ]"
       >
-        <img 
-          src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&h=600&fit=crop&q=80"
-          alt="Clean, plush carpet in modern home interior"
-          class="w-full rounded-lg shadow-2xl ring ring-default"
-          loading="lazy"
-        />
+        <!-- Abstract fiber pattern visualization -->
+        <div class="relative w-full h-[400px] rounded-lg overflow-hidden shadow-xl">
+          <!-- Textured gradient background with warm neutrals -->
+          <div class="absolute inset-0 bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 dark:from-orange-900/20 dark:via-amber-900/20 dark:to-yellow-900/20" />
+          
+          <!-- Abstract fiber pattern using CSS -->
+          <div class="absolute inset-0" style="background-image: repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(0,0,0,0.03) 2px, rgba(0,0,0,0.03) 4px), repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.03) 2px, rgba(0,0,0,0.03) 4px);"></div>
+          
+          <!-- Gradient overlay representing cleaning effect -->
+          <div class="absolute inset-0">
+            <div class="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-transparent to-white/10 dark:to-white/5" />
+            <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-amber-100/20 to-transparent dark:from-amber-800/20" />
+          </div>
+          
+          <!-- Abstract clean spot circles with warm tones -->
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            <div class="relative">
+              <div class="absolute -top-20 -left-20 w-40 h-40 rounded-full bg-gradient-to-br from-amber-100/30 to-orange-100/30 dark:from-amber-800/30 dark:to-orange-800/30 blur-2xl" />
+              <div class="absolute -bottom-20 -right-20 w-32 h-32 rounded-full bg-gradient-to-br from-orange-100/30 to-yellow-100/30 dark:from-orange-800/30 dark:to-yellow-800/30 blur-2xl" />
+              <div class="absolute top-0 left-16 w-24 h-24 rounded-full bg-gradient-to-br from-yellow-100/20 to-amber-100/20 dark:from-yellow-800/20 dark:to-amber-800/20 blur-xl" />
+            </div>
+          </div>
+          
+          <!-- Subtle shine effect -->
+          <div class="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-white/10 to-transparent dark:from-white/5" />
+        </div>
       </UPageSection>
 
       <!-- Eco-Friendly Practices Section -->
@@ -341,12 +450,53 @@
           { label: 'Learn More', size: 'lg', onClick: () => { isContactOpen = true } }
         ]"
       >
-        <img 
-          src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=600&fit=crop&q=80"
-          alt="Lush green forest with sunlight streaming through trees"
-          class="w-full rounded-lg shadow-2xl ring ring-default"
-          loading="lazy"
-        />
+        <!-- Abstract nature-inspired visualization -->
+        <div class="relative w-full h-[400px] rounded-lg overflow-hidden shadow-xl">
+          <!-- Organic gradient background with warm earth tones -->
+          <div class="absolute inset-0 bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50 dark:from-amber-900/10 dark:via-orange-900/10 dark:to-rose-900/10" />
+          
+          <!-- Abstract leaf patterns using SVG -->
+          <div class="absolute inset-0">
+            <svg class="w-full h-full" viewBox="0 0 800 400" preserveAspectRatio="none">
+              <!-- Organic flowing shapes -->
+              <ellipse cx="200" cy="100" rx="150" ry="80" 
+                      fill="url(#leafGradient)" 
+                      opacity="0.15" 
+                      transform="rotate(-20 200 100)"/>
+              <ellipse cx="600" cy="300" rx="180" ry="90" 
+                      fill="url(#leafGradient)" 
+                      opacity="0.12" 
+                      transform="rotate(30 600 300)"/>
+              <ellipse cx="400" cy="200" rx="200" ry="100" 
+                      fill="url(#leafGradient2)" 
+                      opacity="0.1"/>
+              
+              <!-- Gradient definitions with warm colors -->
+              <defs>
+                <radialGradient id="leafGradient">
+                  <stop offset="0%" style="stop-color:rgb(251,176,36);stop-opacity:0.3" />
+                  <stop offset="100%" style="stop-color:rgb(217,119,6);stop-opacity:0.1" />
+                </radialGradient>
+                <radialGradient id="leafGradient2">
+                  <stop offset="0%" style="stop-color:rgb(236,72,153);stop-opacity:0.25" />
+                  <stop offset="100%" style="stop-color:rgb(251,176,36);stop-opacity:0.05" />
+                </radialGradient>
+              </defs>
+              
+              <!-- Subtle circular accents with warm colors -->
+              <circle cx="150" cy="250" r="3" fill="rgb(251,176,36)" opacity="0.3"/>
+              <circle cx="650" cy="150" r="2" fill="rgb(217,119,6)" opacity="0.3"/>
+              <circle cx="350" cy="320" r="2.5" fill="rgb(236,72,153)" opacity="0.3"/>
+            </svg>
+          </div>
+          
+          <!-- Floating organic shapes with warm tones -->
+          <div class="absolute top-1/4 right-1/3 w-24 h-24 rounded-full bg-gradient-to-br from-amber-200/20 to-orange-200/20 dark:from-amber-700/20 dark:to-orange-700/20 blur-2xl animate-float" />
+          <div class="absolute bottom-1/3 left-1/4 w-32 h-32 rounded-full bg-gradient-to-br from-rose-200/15 to-pink-200/15 dark:from-rose-700/15 dark:to-pink-700/15 blur-2xl animate-float-delayed" />
+          
+          <!-- Light overlay -->
+          <div class="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-white/5" />
+        </div>
       </UPageSection>
 
       <!-- FAQ Section -->
